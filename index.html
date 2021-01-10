@@ -9,20 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<script>
-    $.getJSON('http://api.openweathermap.org/data/2.5/weather?id=1843561&appid=0bce82898713873b55aa12dc00ea599c&units=metric&lang=kr',function(data){
-        var $cTemp = data.main.temp.toFixed(0); //현재 온도
-        var $minTemp = data.main.temp_min; //최저온도
-        var $maxTemp = data.main.temp_max; //최고온도
-        var $cWeather = data.weather[0].description; //현재 날씨
-        
-        
-        $('.main-temp').prepend($cTemp); //현재 온도
-        $('.top_weather_box > ul > li:last-child').append($minTemp); //최저온도
-        $('.top_weather_box > ul > li:first-child').append($maxTemp); //최고온도
-        $('.main-weather').append($cWeather); //현재 날씨
-    });
-</script>
+    <script>
+        $(document).ready(function(){
+            $.getJSON('https://api.openweathermap.org/data/2.5/onecall?lat=37.450&lon=126.732&lang=kr&exclude=current,minutely&appid=0bce82898713873b55aa12dc00ea599c&units=metric' ,function(data){
+                
+            })
+        })
+    </script>
 <body>
     <div class="container">
         <section class="top_weather">
@@ -89,7 +82,7 @@
                 </li>
             </ul>
         </section> 
-        <section class="weather-week">
+        <section class="weather_week">
             <table
                     height="222px"> 
                 <tr align="center">
@@ -136,10 +129,62 @@
                 </tr>
             </table>
         </section>
-        <section>
-            
+        <section class="weather_detail">
+            <div class="detail_wrap">
+                <ul>
+                    <li>
+                        <ul>
+                            <li>
+                                <span>
+                                    <p class="detail-title">일출</p>
+                                    <p class="detail-content sunrise"></p>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <p class="detail-title">일몰</p>
+                                    <p class="detail-content sunset"></p>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <span>
+                                    <p class="detail-title">기압</p>
+                                    <p class="detail-content level"></p>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <p class="detail-title">습도</p>
+                                    <p class="detail-content humidity">%</p>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <span>
+                                    <p class="detail-title">바람</p>
+                                    <p class="detail-content wind"></p>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <p class="detail-title">체감온도</p>
+                                    <p class="detail-content feellike"></p>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </section>
         
     </div>
+    <script src="./today_weather.js"></script>
 </body>
 </html>
