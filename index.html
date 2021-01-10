@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incheon Weather</title>
+    <script src="./jquery-3.5.1.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    $.getJSON('http://api.openweathermap.org/data/2.5/forecast?id=1843561&appid=0bce82898713873b55aa12dc00ea599c&units=metric',function(data){
+        var $minTemp = data.list[0].main.temp_min;
+        var $maxTemp = data.list[0].main.temp_max;
+        
+
+        $('.top_weather_box > ul > li:nth-child(2)').append($minTemp)
+    })
+</script>
+<body>
+    <div class="container">
+        <div class="top_weather">
+            <div class="top_weather_box">
+                <p class="main-city">인천광역시</p>
+                <p class="main-weather">현재날씨</p>
+                <h1 class="main-temp">현재온도</h1>
+                <ul>
+                    <li>최대</li>
+                    <li>최저</li>
+                </ul>
+            </div>
+        </div>
+        <div class="weather_box">
+
+        </div>
+        
+    </div>
+</body>
+</html>
