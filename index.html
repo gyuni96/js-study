@@ -10,31 +10,135 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <script>
-    $.getJSON('http://api.openweathermap.org/data/2.5/forecast?id=1843561&appid=0bce82898713873b55aa12dc00ea599c&units=metric',function(data){
-        var $minTemp = data.list[0].main.temp_min;
-        var $maxTemp = data.list[0].main.temp_max;
+    $.getJSON('http://api.openweathermap.org/data/2.5/weather?id=1843561&appid=0bce82898713873b55aa12dc00ea599c&units=metric&lang=kr',function(data){
+        var $cTemp = data.main.temp.toFixed(0); //현재 온도
+        var $minTemp = data.main.temp_min; //최저온도
+        var $maxTemp = data.main.temp_max; //최고온도
+        var $cWeather = data.weather[0].description; //현재 날씨
         
-
-        $('.top_weather_box > ul > li:nth-child(2)').append($minTemp)
-    })
+        
+        $('.main-temp').prepend($cTemp); //현재 온도
+        $('.top_weather_box > ul > li:last-child').append($minTemp); //최저온도
+        $('.top_weather_box > ul > li:first-child').append($maxTemp); //최고온도
+        $('.main-weather').append($cWeather); //현재 날씨
+    });
 </script>
 <body>
     <div class="container">
-        <div class="top_weather">
+        <section class="top_weather">
             <div class="top_weather_box">
                 <p class="main-city">인천광역시</p>
-                <p class="main-weather">현재날씨</p>
-                <h1 class="main-temp">현재온도</h1>
+                <p class="main-weather"></p>
+                <h1 class="main-temp"></h1>
                 <ul>
-                    <li>최대</li>
-                    <li>최저</li>
+                    <li>최고 </li>
+                    <li>최저 </li>
                 </ul>
             </div>
-        </div>
-        <div class="weather_box">
-
-        </div>
-        <div></div>
+        </section>
+        <section class="weather_box">
+            <ul class="slide">
+                <li>
+                    <div class="time_weahter">
+                        <span>15시</span>
+                        <span>아이콘</span>
+                        <span>-4</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="time_weahter">
+                        <span>15시</span>
+                        <span>아이콘</span>
+                        <span>-4</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="time_weahter">
+                        <span>15시</span>
+                        <span>아이콘</span>
+                        <span>-4</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="time_weahter">
+                        <span>15시</span>
+                        <span>아이콘</span>
+                        <span>-4</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="time_weahter">
+                        <span>15시</span>
+                        <span>아이콘</span>
+                        <span>-4</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="time_weahter">
+                        <span>15시</span>
+                        <span>아이콘</span>
+                        <span>-4</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="time_weahter">
+                        <span>15시</span>
+                        <span>아이콘</span>
+                        <span>-4</span>
+                    </div>
+                </li>
+            </ul>
+        </section> 
+        <section class="weather-week">
+            <table
+                    height="222px"> 
+                <tr align="center">
+                    <td class="week-day">월요일</td>
+                    <td class="week-icon">아이콘</td>
+                    <td class="week-max">최고</td>
+                    <td class="week-min">최저</td>
+                </tr>
+                <tr align="center">
+                    <td class="week-day">월요일</td>
+                    <td class="week-icon">아이콘</td>
+                    <td class="week-max">최고</td>
+                    <td class="week-min">최저</td>
+                </tr>
+                <tr align="center">
+                    <td class="week-day">월요일</td>
+                    <td class="week-icon">아이콘</td>
+                    <td class="week-max">최고</td>
+                    <td class="week-min">최저</td>
+                </tr>
+                <tr align="center">
+                    <td class="week-day">월요일</td>
+                    <td class="week-icon">아이콘</td>
+                    <td class="week-max">최고</td>
+                    <td class="week-min">최저</td>
+                </tr>
+                <tr align="center">
+                    <td class="week-day">월요일</td>
+                    <td class="week-icon">아이콘</td>
+                    <td class="week-max">최고</td>
+                    <td class="week-min">최저</td>
+                </tr>
+                <tr align="center">
+                    <td class="week-day">월요일</td>
+                    <td class="week-icon">아이콘</td>
+                    <td class="week-max">최고</td>
+                    <td class="week-min">최저</td>
+                </tr>
+                <tr align="center">
+                    <td class="week-day">월요일</td>
+                    <td class="week-icon">아이콘</td>
+                    <td class="week-max">최고</td>
+                    <td class="week-min">최저</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            
+        </section>
         
     </div>
 </body>

@@ -41,6 +41,13 @@ a{
     font-size: 55px;
     margin-bottom: 15px;
 }
+.top_weather .main-temp::after,
+.top_weather ul li::after,
+.weather_box .time_weahter span:last-child::after,
+.weather-week table .week-max::after,
+.weather-week table .week-min::after{
+    content: "°";
+}
 .top_weather ul{
     display: flex;
     justify-content: center;
@@ -49,10 +56,63 @@ a{
     margin-right: 15px;
 }
 
+
 /* wwather box */
 
 .weather_box{
-    border-top: 1px #fff solid;
-    border-bottom:  1px #fff solid;
+    border-top: 1px rgba(255,255,255,0.7) solid;
+    border-bottom:  1px rgba(255,255,255,0.7) solid;
     height: 125px; 
+}
+.weather_box .slide{  
+    display: flex;
+    padding: 13px 20px 20px;
+    overflow: hidden;
+}
+.weather_box .slide li {
+    margin-left: 20px;
+}
+.weather_box .slide li:first-child{
+    margin-left: 0;
+}
+.weather_box .time_weahter{
+    width: 60px;
+    height: 100px;
+    text-align: center;
+    padding: 6px 0 ;
+    background: rgba(194, 198, 255, 0.6);
+    border-radius: 10px;
+}
+.weather_box .time_weahter:last-child{
+    margin-left: 0;
+}
+.weather_box .time_weahter span{
+    display: block;
+    margin-bottom: 20px;
+}
+.weather_box .time_weahter span:last-child{
+    margin-bottom: 0;
+}
+
+/* wather week */
+.weather-week{
+    padding : 20px 33px;
+    border-bottom: 1px solid rgba(255,255,255,0.7);
+}
+
+.weather-week table .week-day{
+    width: 50px;
+    text-align: left;
+}
+.weather-week table .week-icon{
+    width: 284px;
+}
+.weather-week table .week-max{
+    text-align: right;
+    width: 50px;
+}
+.weather-week table .week-min{
+    text-align: right;
+    width: 50px;
+    color: #828282;
 }
