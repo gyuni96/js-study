@@ -15,7 +15,6 @@ a{
 }
 .container{
     width: 500px;
-    height: 850px;
     background: #92B0FF;
     margin: 100px auto;
     color:#fff;
@@ -35,6 +34,13 @@ a{
 }
 .top_weather .main-weather{
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top_weather .main-weather img{
+    width: 40px;
+    height: 40px;
 }
 .top_weather .main-temp{
     font-weight: 700;
@@ -43,9 +49,9 @@ a{
 }
 .top_weather .main-temp::after,
 .top_weather ul li::after,
-.weather_box .time_weahter span:last-child::after,
 .weather-week table .week-max::after,
-.weather-week table .week-min::after{
+.weather-week table .week-min::after,
+.detail-content.feellike::after{
     content: "°";
 }
 .top_weather ul{
@@ -59,18 +65,46 @@ a{
 
 /* wwather box */
 
-.weather_box{
+.box{
     border-top: 1px rgba(255,255,255,0.7) solid;
     border-bottom:  1px rgba(255,255,255,0.7) solid;
     height: 125px; 
-}
-.weather_box .slide{  
-    display: flex;
-    padding: 13px 20px 20px;
+    position: relative;
     overflow: hidden;
+}
+#back{
+    position: absolute;
+    left:  -5px;
+    top:40%;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px
+}
+#next{
+    position: absolute;
+    right: -5px;
+    top:40%;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px
+}
+.weather_box .slide{
+    width: 1000px;
+    position: absolute;
+    top:0 ;
+    left: 0;
+    /* display: flex; */
+    padding: 13px 20px 20px;
+    
 }
 .weather_box .slide li {
     margin-left: 20px;
+    display: inline-block;
+}
+.weather_box .slide li :hover{
+    color: #000000;
+    background: rgba(194, 198, 255, 0.9);
+    cursor: pointer;
 }
 .weather_box .slide li:first-child{
     margin-left: 0;
@@ -88,31 +122,101 @@ a{
 }
 .weather_box .time_weahter span{
     display: block;
-    margin-bottom: 20px;
 }
-.weather_box .time_weahter span:last-child{
-    margin-bottom: 0;
+.weather_box .time_weahter span img {
+    width: 50px;
+    height: 50px;
 }
 
+
 /* wather week */
-.weather-week{
+.weather_week{
     padding : 20px 33px;
     border-bottom: 1px solid rgba(255,255,255,0.7);
 }
 
-.weather-week table .week-day{
+.weather_week table .week-day{
     width: 50px;
     text-align: left;
 }
-.weather-week table .week-icon{
+.weather_week table .week-icon{
     width: 284px;
 }
-.weather-week table .week-max{
+.weather_week table .week-icon img{
+    width: 32px;
+    height: 32px;
+}
+.weather_week table .week-max{
     text-align: right;
     width: 50px;
 }
-.weather-week table .week-min{
+.weather_week table .week-min{
     text-align: right;
     width: 50px;
-    color: #828282;
+    color: #ebebeb;
+}
+
+/* weather detail */
+
+.weather_detail{
+    padding:15px 33px;
+}
+.weather_detail .detail_wrap{
+    width: 100%;
+}
+.weather_detail .detail_wrap ul li {
+    margin-bottom: 5px;
+}
+.weather_detail .detail_wrap ul li:last-child{
+    margin-bottom: 0;
+}
+
+.weather_detail .detail_wrap ul li ul{
+    display: flex;
+    border-bottom: 1px solid rgba(255,255,255,0.7);
+    
+}
+.weather_detail .detail_wrap ul li ul li {
+    width: 50%;
+}
+.weather_detail .detail_wrap ul li ul li span .detail-title{
+    font-size: 12px;
+    color: #ebebeb;
+}
+.weather_detail .detail_wrap ul li ul li span .detail-content{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.level::after{
+    content: 'hPa';
+    font-size: 20px;
+    color: #ebebeb;
+}
+.wind::after{
+    content: 'm/s';
+    font-size: 20px;
+    color: #ebebeb;
+}
+
+/* footer */
+
+footer{
+    width: 100%;
+    padding : 20px 0;
+    border-top: 1px solid rgba(255,255,255,0.7);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+footer p::after{
+    content: " 2021";
+    font-size: 12px;
+}
+footer a{
+    padding: 10px;
+}
+footer a i{
+    font-size: 30px;
+    color: #fff;
 }
