@@ -3,8 +3,8 @@ $(document).ready(function(){
     
         // 오늘 날씨
         var $cTemp = data.main.temp.toFixed(0); //현재 온도
-        var $minTemp = data.main.temp_min; //최저온도
-        var $maxTemp = data.main.temp_max; //최고온도
+        var $minTemp = data.main.temp_min.toFixed(1); //최저온도
+        var $maxTemp = data.main.temp_max.toFixed(1); //최고온도
         var $cWeather = data.weather[0].description; //현재 날씨
         var $cIcon = data.weather[0].icon;
         
