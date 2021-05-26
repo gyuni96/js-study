@@ -16,8 +16,8 @@ $(document).ready(function(){
         // 시간ㅇ변환 유닉스 시간
 
         var $humidity = data.main.humidity; //습도 
-        var $wind = data.wind.speed ; //풍향 풍속
-        var $feelsLike = data.main.feels_like; // 체감온도
+        var $wind = data.wind.speed.toFixed(1) ; //풍향 풍속
+        var $feelsLike = data.main.feels_like.toFixed(1); // 체감온도
         var $level = data.main.pressure; // 대기압
 
         function windDeg(){
