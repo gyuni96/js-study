@@ -1,0 +1,60 @@
+@charset "UTF-8";
+#info_author{
+    margin-top: 80px;
+}
+#info_studio{
+    margin-top: 80px;
+}
+
+
+/* 타이틀 */
+.title{
+    margin-bottom: 30px;
+}
+.title .title_info{
+    text-align: center;
+}
+.title .title_info p{
+    font-size: 1.5em;
+    line-height: 1.6em;
+    font-weight: 300;
+    border-bottom: 1px solid #000;
+    display: inline-block;
+}
+
+
+/* 컨텐츠 */
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content .img_author{
+    width: 500px;
+    height: 500px;
+    /* overflow: hidden; */
+    margin-right: 60px;
+    margin-left: 60px;
+}
+
+.content .img_studio{
+    width: 880px;
+    height: 495px;
+    /* overflow: hidden; */
+    margin-right: 50px;
+    margin-left: 50px;
+    
+}
+#info_author .content .info{
+    width: 300px;
+    height: 500px;
+    margin-right: 60px;
+}
+#info_studio .content .info{
+    text-align: center;
+    width: 880px;
+    height: 495px;
+    margin-top: 40px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
