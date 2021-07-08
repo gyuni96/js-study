@@ -1,4 +1,10 @@
 @charset "UTF-8";
+/* 메인 이미지 */
+#main_header .main_img{
+    width: 100%;
+    height: 100vh;
+    background-color: aquamarine;
+}
 
 /* 슬로건 */
 #motto{
@@ -28,6 +34,8 @@
 #instagram .insta_content{
     display: flex;
     flex-wrap: wrap;
+    height: 960px;
+    overflow: hidden;
 }
 #instagram .insta_content .box{
     width: 300px;
@@ -44,4 +52,27 @@
 #instagram .insta_more a{
     font-size: 0.8em;
     padding: 10px;
+}
+
+
+/* 모바일 */
+@media screen and (max-width:767px) {
+    #instagram .insta_content .box{
+        margin-left: 90px;
+        margin-bottom: 20px;
+    }
+}
+
+/* 테블릿 */
+@media all and (min-width:768px) and (max-width:1023px){
+    #instagram .insta_content{
+        height: 640px;
+    }
+    #instagram .insta_content .box{
+        margin-bottom: 20px;
+    }
+    #instagram .insta_content .box:nth-child(2n-1){
+        margin-left: 60px;
+        margin-right: 28px;
+    }
 }

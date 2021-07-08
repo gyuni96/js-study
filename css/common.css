@@ -8,6 +8,7 @@ body{
     font-size: 16px;
     font-weight: 400;
     position: relative;
+    color: rgb(20, 20, 20);
 }
 /* 컨테이너 */
 .container{
@@ -31,18 +32,22 @@ body{
     margin-left: 50px;
     padding: 40px;
 }
-#main_header .gnb > ul{
+#main_header .gnb > .menu_list{
     display: flex;
     margin-right: 50px;
 }
-#main_header .gnb > ul > li > a{
-    padding: 40px;
+#main_header .gnb > .menu_list > li > a{
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
     display: inline-block;
 }
-#main_header .main_img{
-    width: 100%;
-    height: 600px;
-    background-color: aquamarine;
+#trigger{
+    display: none;
+    font-size: 1.5em;
+}
+#main_header .mobile_list{
+    display: none;
 }
 
 
@@ -50,7 +55,7 @@ body{
 
 #main_footer{
     width: 100%;
-    height: 360px;
+    height: 170px;
     background: #383838;
 }
 #main_footer .footer_sns .sns_group{
@@ -73,4 +78,100 @@ body{
     color: rgb(235, 235, 235);
     font-size: 0.8em;
     margin-bottom: 10px;
+}
+
+.fix_btn_gruop{
+    position: fixed;
+    bottom: 3%;
+    right: 2%;
+}
+.fix_btn_gruop .btn{
+    /* border: 1px solid red; */
+    border-radius: 40px;
+    background: #fff;
+    margin-bottom: 5px;
+    padding: 0 20px 0 5px;
+}
+.fix_btn_gruop .btn a div{
+    display: flex;
+}
+.fix_btn_gruop .btn a div img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+}
+.fix_btn_gruop .btn a div span{
+    padding-top: 7px;
+    margin-left: 5px;
+}
+.fix_btn_gruop .btn a div p{
+    padding-top: 7px;
+    margin-left: 5px;
+}
+
+
+/* 모바일 */
+@media screen and (max-width:767px) {
+    .container{
+        width: 480px;
+    }
+    #main_header .gnb > .menu_list{
+        display: none;
+    }
+    #trigger{
+        display: block;
+        margin-right: 50px;
+        margin-top: 30px;
+    }
+    #main_header .mobile_list{
+        /* display: block; */
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+    }
+    #main_header .mobile_list > .end_btn{
+        position: absolute;
+        top: 15px;
+        right: 42%;
+        z-index: 1;
+        padding: 5px;
+        font-size: 1.5em;
+        color: rgba(0, 0, 0, 0.8);
+    }
+    #main_header .mobile_list > ul{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-right: 55px;
+        padding-top: 80px;
+        
+        min-width: 50%;
+        min-height: 100pc;
+        background-color: #fff;
+    }
+    #main_header .mobile_list > ul > li{
+        display: block;
+        width: 120px;
+        border-bottom: 1px solid #000;
+        text-align: right;
+        margin-bottom: 20px;
+        padding-bottom: 8px;
+    }
+    
+    #main_header .mobile_list > ul > li > a{
+        padding: 8px 0;
+        padding-left: 30px;    
+    }
+    
+
+}
+
+/* 테블릿 */
+@media all and (min-width:768px) and (max-width:1023px){
+    .container{
+        width: 768px;
+    }
+
+
 }

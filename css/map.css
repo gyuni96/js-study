@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+/* 메인 이미지 */
+#main_header .main_img{
+    width: 100%;
+    height: 600px;
+    background-color: aquamarine;
+}
+
+
+/* 타이틀 */
+#map .map_title{
+    margin-top: 80px;
+    font-size: 2.25em;
+    line-height: 2.25em;
+    font-weight: 400;
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+
+/* 내용 */
+#map .map_description{
+    font-size: 1.125em;
+    line-height: 1.125em;
+    margin-bottom: 40px;
+    margin-left: 20px;
+}
+#map .map_description p{
+    margin-bottom: 20px;
+}
+#map .map_description p span{
+    font-size: 0.75em;
+    margin-left: 5px;
+}
+#map .map_description p span .mark{
+    color: #fff;
+    border-radius: 5px;
+    background: #a9cfff;
+    padding: 2px 4px;
+    margin-right: 3px;
+}
+/* 맵 */
+.map{
+    width: 100%;
+    height: 470px;
+    background: #a9cfff;
+    margin-bottom: 70px;
+}
+
+/* 모바일 */
+@media screen and (max-width:767px) {
+    
+}
+
+/* 테블릿 */
+@media all and (min-width:768px) and (max-width:1023px){
+    
+}
