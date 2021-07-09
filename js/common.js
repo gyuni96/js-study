@@ -18,6 +18,8 @@ $(function(){
             $('.gnb .menu_list li a').css({'color' : '#fff'})
         }
     })
+    //해야될것
+    // 마우스 오버시 이벤트 , 이미지슬라이드, 모달창 , api구현
     
     // 모바일 메뉴
     var menuDuration = 700
