@@ -71,7 +71,28 @@ body{
 #main_header .mobile_list{
     display: none;
 }
-
+#main_header .gnb ul li a:hover{
+    animation: up 0.3s ease-out;
+}
+.end_btn:hover{
+    animation: rotation 0.3s ease-in;
+}
+@keyframes up {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+@keyframes rotation{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
 
 /* 푸터 */
 
