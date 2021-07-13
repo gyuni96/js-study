@@ -68,6 +68,29 @@
     margin-left: 50px;
 }
 
+
+/* 슬라이드 */
+.slider {
+    list-style:none;
+    height:500px;
+    overflow:hidden;
+    display: flex;
+}
+.slider li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 518px;
+    opacity: 0;
+}
+.slider li div {
+    width:100%;
+    height:100%;
+    background-size:cover;
+    position:relative;
+}
+
 /* 모바일 */
 @media screen and (max-width:767px) {
     

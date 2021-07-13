@@ -62,18 +62,18 @@ $(function(){
 
     // top버튼 생겻다 없어졋다
     $(window).scroll(function(){
-        if($(this).scrollTop() > 500){
+        if($(this).scrollTop() > 400){
             $('.btn.top').fadeIn()
         }else{
             $('.btn.top').fadeOut()
         }
     })
     // 누르면 위로
-    $('.btn.top').click(function(ㄷ){
+    $('.btn.top').click(function(e){
         e.preventDefault()
         $('html,body').animate({
             scrollTop : 0
-        },400)
+        },600)
         return false
     })
 })

@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <!-- css -->
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/shoot.css">
@@ -22,20 +24,20 @@
         <div class="gnb">
             <a href="#" class="logo">logo</a>
             <ul class="menu_list">
-                <li><a href="#">홈</a></li>
-                <li><a href="#">당소담 소개</a></li>
-                <li><a href="#">촬영</a></li>
-                <li><a href="#">오시는길</a></li>
+                <li><a href="#" class="home">홈</a></li>
+                <li><a href="#" class="info">당소담 소개</a></li>
+                <li><a href="#" class="shoot">촬영</a></li>
+                <li><a href="#" class="map">오시는길</a></li>
             </ul>
             <a id="trigger" href="#"><i class="fas fa-bars"></i></a>
         </div>
         <div class="mobile_list" align="right">
             <a href="#" class="end_btn"><i class="fas fa-times"></i></a>
             <ul>
-                <li><a href="#">홈</a></li>
-                <li><a href="#">당소담 소개</a></li>
-                <li><a href="#">촬영</a></li>
-                <li><a href="#">오시는길</a></li>
+                <li><a href="#" class="home">홈</a></li>
+                <li><a href="#" class="info">당소담 소개</a></li>
+                <li><a href="#" class="shoot">촬영</a></li>
+                <li><a href="#" class="map">오시는길</a></li>
             </ul>
         </div>
         <div class="main_img">
@@ -86,10 +88,15 @@
             </div>
             <div class="id_box">
                 <div class="id_content">
-                    <div class="id_img shoot_img">
-                        이미지
-                    </div>
-                    <div class="id_info">
+                        <div class="swiper-container swiper1 id_img shoot_img slider1">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" style="background-color: red;"></div>
+                                <div class="swiper-slide" style="background-color: blue;"></div>
+                                <div class="swiper-slide" style="background-color: yellow;"></div>
+                                <div class="swiper-slide" style="background-color: green;"></div>
+                            </div>
+                        </div>
+                    <div class="id_info info_box">
                         <div class="id_title shoot_title">
                             <h3>증명사진(일반)</h3>
                             <p>￦30,000</p>
@@ -103,7 +110,7 @@
                     </div>
                 </div>
                 <div class="id_content">
-                    <div class="id_info">
+                    <div class="id_info info_box">
                         <div class="id_title shoot_title">
                             <h3>증명사진(배경)</h3>
                             <p>￦40,000</p>
@@ -123,8 +130,13 @@
                             <a href="#" class="modal_btn">배경지 </a>
                         </div>
                     </div>
-                    <div class="id_img shoot_img">
-                        이미지
+                    <div class="swiper-container swiper2 id_img shoot_img slider2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-color: red;"></div>
+                            <div class="swiper-slide" style="background-color: blue;"></div>
+                            <div class="swiper-slide" style="background-color: yellow;"></div>
+                            <div class="swiper-slide" style="background-color: green;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -134,10 +146,15 @@
         <div class="container">
             <div class="profile_box">
                 <div class="profile_content">
-                    <div class="profile_img shoot_img">
-                        이미지
+                    <div class="swiper-container swiper3 profile_img shoot_img slider3">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-color: red;"></div>
+                                <div class="swiper-slide" style="background-color: blue;"></div>
+                                <div class="swiper-slide" style="background-color: yellow;"></div>
+                                <div class="swiper-slide" style="background-color: green;"></div>
+                        </div>
                     </div>
-                    <div class="profile_info">
+                    <div class="profile_info info_box">
                         <div class="profile_title shoot_title">
                             <h3>1인 프로필 사진</h3>
                             <p>￦50,000</p>
@@ -153,10 +170,15 @@
                     </div>
                 </div>
                 <div class="profile_content">
-                    <div class="profile_img shoot_img rotation">
-                        이미지
+                    <div class="swiper-container swiper4 profile_img shoot_img rotation slider4">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-color: red;"></div>
+                                <div class="swiper-slide" style="background-color: blue;"></div>
+                                <div class="swiper-slide" style="background-color: yellow;"></div>
+                                <div class="swiper-slide" style="background-color: green;"></div>
+                        </div>
                     </div>
-                    <div class="profile_info">
+                    <div class="profile_info info_box">
                         <div class="profile_title shoot_title">
                             <h3>2인 프로필 사진</h3>
                             <p>￦40,000(인당)</p>
@@ -181,14 +203,52 @@
                     <p>추가 가격</p>
                 </div>
             </div>
-            <div class="money_description">
+            <div class="money_description info_box">
                 <p>인화 추가 : ￦5,000</p>
                 <p>보정컷 추가 : ￦20,000</p>
             </div>
         </div>
     </section>
     <div id="modal">
-        <div class="container">
+        <div class="wrap">
+            <div class="title">
+                <p>색배경</p>
+            </div>
+            <a href="#" class="btn"><i class="fas fa-times"></i></a>
+            <div class="content">
+                <ul>
+                    <li>색1</li>
+                    <li>색1</li>
+                    <li>색1</li>
+                    <li>색1</li>
+                </ul>
+            </div>
+        </div>        
+    </div>
+    <div class="fix_btn_gruop">
+        <div class="btn top">
+            <a href="#">
+                <div>
+                    <i class="fas fa-arrow-up"></i>
+                    <p>TOP</p>
+                </div>
+            </a>
+        </div>
+        <div class="btn kakao">
+            <a href="#">
+                <div>
+                    <img src="../img/kakaoch.png" alt="kakao">
+                    <p>카톡</p>
+                </div>
+            </a>
+        </div>
+        <div class="btn toktok">
+            <a href="#">
+                <div>
+                    <img src="../img/toktok.png" alt="toktok">
+                    <p>톡톡</p>
+                </div>
+            </a>
         </div>
     </div>
     <footer id="main_footer">
@@ -207,5 +267,84 @@
             </div>
         </div>
     </footer>
+    <script src="../js/jquery/jquery-3.6.0.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script>
+        // swiper 구문
+        var swiper1 = new Swiper('.swiper1', {
+            autoplay:{
+                delay: 3000,
+                disableOnInteraction : false
+            },
+            effect : 'fade',
+            loop : true
+        });
+        
+        $('.swiper1').hover(function(){
+            swiper1.autoplay.stop()
+        },function(){
+            swiper1.autoplay.start()
+        })
+
+        var swiper2 = new Swiper('.swiper2', {
+            autoplay:{
+                delay: 3000,
+                disableOnInteraction : false
+            },
+            effect : 'fade',
+            loop : true
+        });
+
+        $('.swiper2').hover(function(){
+            swiper2.autoplay.stop()
+        },function(){
+            swiper2.autoplay.start()
+        })
+
+        var swiper3 = new Swiper('.swiper3', {
+            autoplay:{
+                delay: 3000,
+                disableOnInteraction : false
+            },
+            effect : 'fade',
+            loop : true
+        });
+
+        $('.swiper3').hover(function(){
+            swiper3.autoplay.stop()
+        },function(){
+            swiper3.autoplay.start()
+        })
+
+        var swiper4 = new Swiper('.swiper4', {
+            autoplay:{
+                delay: 3000,
+                disableOnInteraction : false
+            },
+            effect : 'fade',
+            loop : true
+        });
+
+        $('.swiper4').hover(function(){
+            swiper4.autoplay.stop()
+        },function(){
+            swiper4.autoplay.start()
+        })
+
+        // modal 
+        $(function(){
+            //모달창 열기
+            $('.modal_btn').on('click',function(e){
+                e.preventDefault()
+                $('#modal').css({'display':'block'})
+            })
+            //종료
+            $('#modal .btn').on('click',function(e){
+                e.preventDefault()
+                $('#modal').css({'display':'none'})
+            })
+        })
+    </script>
 </body>
 </html>

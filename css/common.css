@@ -81,16 +81,22 @@ body{
     0%{
         transform: translateY(0);
     }
-    100%{
+    50%{
         transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(0);
     }
 }
 @keyframes rotation{
     0%{
         transform: rotate(0);
     }
-    100%{
+    50%{
         transform: rotate(90deg);
+    }
+    0%{
+        transform: rotate(0);
     }
 }
 
