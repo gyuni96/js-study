@@ -29,6 +29,11 @@ body{
     background: rgba(255, 255, 255, 0);
     
 }
+#main_header .gnb .logo{
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 300;
+}
 @keyframes fade {
     0%{
         background:rgba(255, 255, 255, 0)
