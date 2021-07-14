@@ -8,9 +8,9 @@
     <!-- 폰트어썸 -->
     <script src="https://kit.fontawesome.com/67daea8931.js" crossorigin="anonymous"></script>
     <!-- 구글폰트 Noto serif KR -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
     <!-- swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <!-- css -->
@@ -50,8 +50,16 @@
                 </div>
             </div>
             <div class="content">
-                <div class="img_author">
-                    <img src="https://placehold.it/500" alt="author_img">
+                <div class="swiper-container swiper-author img_author">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background: url(../img/author/01.png); background-size: cover; background-repeat: no-repeat;"></div>
+                        <div class="swiper-slide" style="background: url(../img/author/02.png); background-size: cover; background-repeat: no-repeat;"></div>
+                        <div class="swiper-slide" style="background: url(../img/author/03.png); background-size: cover; background-repeat: no-repeat;"></div>
+                        <div class="swiper-slide" style="background: url(../img/author/04.png); background-size: cover; background-repeat: no-repeat;"></div>
+                        <div class="swiper-slide" style="background: url(../img/author/05.png); background-size: cover; background-repeat: no-repeat;"></div>
+                        <div class="swiper-slide" style="background: url(../img/author/06.png); background-size: cover; background-repeat: no-repeat;"></div>
+                        <div class="swiper-slide" style="background: url(../img/author/07.png); background-size: cover; background-repeat: no-repeat;"></div>
+                    </div>
                 </div>
                 <div class="info">
                     <p>정보 정보 정보</p>
@@ -70,8 +78,22 @@
                 </div>
             </div>
             <div class="content">
-                <div class="img_studio">
-                    <img src="https://placehold.it/880x495" alt="author_img">
+                <div class="swiper-container swiper-studio img_studio">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background: url(../img/studio/01.png); background-size: cover; background-repeat: no-repeat;"></div>
+                        <div class="swiper-slide" style="background: url(../img/studio/02.png); background-size: cover; background-repeat: no-repeat;"></div>
+                        <div class="swiper-slide" style="background: url(../img/studio/03.png); background-size: cover; background-repeat: no-repeat;"></div>
+                        <div class="swiper-slide" style="background: url(../img/studio/04.png); background-size: cover; background-repeat: no-repeat;"></div>
+                        <div class="swiper-slide" style="background: url(../img/studio/05.png); background-size: cover; background-repeat: no-repeat;"></div>
+                        <div class="swiper-slide" style="background: url(../img/studio/06.png); background-size: cover; background-repeat: no-repeat;"></div>
+                        <div class="swiper-slide" style="background: url(../img/studio/07.png); background-size: cover; background-repeat: no-repeat;"></div>
+                        <div class="swiper-slide" style="background: url(../img/studio/08.png); background-size: cover; background-repeat: no-repeat;"></div>
+                        <div class="swiper-slide" style="background: url(../img/studio/09.png); background-size: cover; background-repeat: no-repeat;"></div>
+                        <div class="swiper-slide" style="background: url(../img/studio/10.png); background-size: cover; background-repeat: no-repeat;"></div>
+                        <div class="swiper-slide" style="background: url(../img/studio/11.png); background-size: cover; background-repeat: no-repeat;"></div>
+                        <div class="swiper-slide" style="background: url(../img/studio/12.png); background-size: cover; background-repeat: no-repeat;"></div>
+                        <div class="swiper-slide" style="background: url(../img/studio/13.png); background-size: cover; background-repeat: no-repeat;"></div>
+                    </div>
                 </div>
                 <div class="info">
                     <p>정보 정보 정보</p>
@@ -100,7 +122,7 @@
             </a>
         </div>
         <div class="btn toktok">
-            <a href="#">
+            <a href="https://talk.naver.com/ct/w4o5yb" target="_blank">
                 <div>
                     <img src="../img/toktok.png" alt="toktok">
                     <p>톡톡</p>
@@ -127,5 +149,36 @@
     <script src="../js/jquery/jquery-3.6.0.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="../js/common.js"></script>
+    <script>
+        var swiper1 = new Swiper('.swiper-author', {
+            autoplay:{
+                delay: 3000,
+                disableOnInteraction : false
+            },
+            effect : 'fade',
+            loop : true
+        });
+        
+        $('.swiper1').hover(function(){
+            swiper1.autoplay.stop()
+        },function(){
+            swiper1.autoplay.start()
+        })
+
+        var swiper2 = new Swiper('.swiper-studio', {
+            autoplay:{
+                delay: 3000,
+                disableOnInteraction : false
+            },
+            effect : 'fade',
+            loop : true
+        });
+
+        $('.swiper2').hover(function(){
+            swiper2.autoplay.stop()
+        },function(){
+            swiper2.autoplay.start()
+        })
+    </script>
 </body>
 </html>

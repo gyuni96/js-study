@@ -135,7 +135,7 @@
     padding: 12px 30px;
 }
 .modal_wrap .modal_btn:hover{
-    background: #000;
+    background: #704b34;
     color: #fff;
     cursor: pointer;
 }
@@ -349,7 +349,10 @@
 }
 
 /* 테블릿 */
-@media all and (min-width:768px) and (max-width:1023px){
+@media screen and (min-width:768px) and (max-width:1023px){
+    body{
+        overflow-x: hidden;
+    }
     .id_box .id_content:first-child .id_info{
         padding: 0;
         width: 285px;

@@ -4,11 +4,17 @@
 
 /* 폰트 */
 body{
-    font-family: 'Noto Serif KR', serif;
+    font-family: 'Chosunilbo_myungjo';
     font-size: 16px;
     font-weight: 400;
     position: relative;
-    color: rgb(20, 20, 20);
+    color: rgb(26, 26, 26);
+}
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 /* 컨테이너 */
 .container{
@@ -27,7 +33,7 @@ body{
     display: flex;
     justify-content: space-between;
     background: rgba(255, 255, 255, 0);
-    
+    z-index: 999;
 }
 #main_header .gnb .logo{
     color: #fff;
@@ -81,6 +87,9 @@ body{
 }
 .end_btn:hover{
     animation: rotation 0.3s ease-in;
+}
+#main_header .mobile_list ul li a:hover{
+    animation: up 0.3s ease-out;
 }
 @keyframes up {
     0%{
@@ -194,7 +203,7 @@ body{
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.3);
-        z-index: 5;
+        z-index: 9999;
     }
     #main_header .mobile_list > .end_btn{
         position: absolute;
@@ -229,14 +238,13 @@ body{
         padding: 8px 0;
         padding-left: 30px;    
     }
-    
 
 }
 
 /* 테블릿 */
-@media all and (min-width:768px) and (max-width:1023px){
+@media screen and (min-width:768px) and (max-width:1023px){
     .container{
-        width: 768px;
+        width: 760px;
     }
     #main_header .gnb .logo{
         margin-left: 30px;
