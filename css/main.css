@@ -3,7 +3,17 @@
 #main_header .main_img{
     width: 100%;
     height: 100vh;
-    background-color: aquamarine;
+    background:url(../img/bg3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 50vh;
+}
+#main_header .main_img p{
+    text-align: center;
+    /* line-height: 500px; */
+    color: #fff;
+    font-size: 1.6em;
 }
 
 /* 슬로건 */
