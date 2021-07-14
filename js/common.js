@@ -9,6 +9,7 @@ $(function(){
             $('.gnb').css({animationName : 'fade'})
             $('.gnb').css({animationDuration : '0.3s'})
             $('.gnb .menu_list li a').css({color : '#000'})
+            $('#trigger').css({'color':'#000'})
             
         }else if(scroll_top == 0){
             $('.gnb').css({background:'rgba(255, 255, 255, 0)'})
@@ -16,6 +17,8 @@ $(function(){
             $('.gnb').css({animationDuration : '0.3s'})
             
             $('.gnb .menu_list li a').css({'color' : '#fff'})
+            $('#trigger').css({'color':'#fff'})
+
         }
     })
     //해야될것
