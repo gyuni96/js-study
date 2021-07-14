@@ -176,6 +176,9 @@ body{
     .container{
         width: 480px;
     }
+    #main_header .gnb .logo{
+        margin-left: 20px;
+    }
     #main_header .gnb > .menu_list{
         display: none;
     }
@@ -234,6 +237,9 @@ body{
 @media all and (min-width:768px) and (max-width:1023px){
     .container{
         width: 768px;
+    }
+    #main_header .gnb .logo{
+        margin-left: 30px;
     }
 
 
