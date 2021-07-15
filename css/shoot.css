@@ -157,11 +157,12 @@
     left: 0;
     right: 0;
     background: #fff;
-    width: 60vw;
+    border: 1px solid #1b1b1b;
+    width: 65vw;
     max-width: 1536px;
-    max-height: 864px;
+    /* max-height: 864px; */
     height: 80vh;
-    z-index: 6;
+    z-index: 9998;
     border-radius: 30px;
     overflow-y: scroll;
     -ms-overflow-style: none;
@@ -177,7 +178,7 @@
 }
 #modal .wrap .title{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 70px;
     margin-bottom: 100px;
 }
 #modal .wrap .title p {
@@ -195,7 +196,7 @@
     /* width: 60vw; */
     max-width: 1152px;
     height: 58vh;
-    max-height: 648px;
+    /* max-height: 648px; */
     margin: 0 auto;
     overflow-y: scroll;
     -ms-overflow-style: none;
@@ -207,18 +208,36 @@
     display: flex;
     width: 580px;
     flex-wrap: wrap;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 0 auto;
+    padding-left: 4px;
 }
 #modal .wrap .content ul li {
-    width: 280px;
-    height: 300px;
-    border: 1px solid blue;
-    margin-right: 18px;
+    width: 135px;
+    /* height: 300px; */
+    /* border: 1px solid blue; */
+    margin-right: 10px;
     margin-bottom: 14px;
+    display: flex;
 }
-#modal .wrap .content ul li:nth-last-child(2n-1){
+#modal .wrap .content ul li:nth-child(4n){
     margin-right: 0;
+}
+#modal .wrap .content ul li div:first-child{
+    /* margin-right: 5px; */
+    width: 25px;
+}
+#modal .wrap .content ul li div:last-child{
+    width: 110px;
+    height: 110px;
+    border-radius: 10px;
+}
+#modal .wrap .content ul li div p{
+    font-size: 1.1em;
+}
+#modal .wrap .content ul li div p:last-child{
+    margin-top: 5px;
+    writing-mode: tb-rl;
 }
 /* 촬영 구성 */
 
@@ -289,6 +308,7 @@
     line-height: 2.5em;
 }
 @media screen and (max-width:479px) {
+    
     .shoot_img{
         width: 250px;
         height: 323.75px;
@@ -323,6 +343,9 @@
         height: 210px;
         margin-bottom: 60px;
     }
+    .id_box .id_content .id_info{
+        width: 260px;
+    }
     /* 색배경 증명 */
 
     .id_box .id_content:last-child{
@@ -338,7 +361,9 @@
         text-align: center;
         height: 360px;
         margin-bottom: 60px;
+        width: 260px;
     }
+    
 
     /* 프로필 */
     #profile{
@@ -348,6 +373,27 @@
     .shoot_img.rotation{
         width: 462px;
         height: 357px;
+    }
+    #modal .wrap{
+        width: 85vw;
+    }
+    #modal .wrap .content{
+        width: 250px;
+    }
+    #modal .wrap .content ul{
+        width: 240px;
+        padding-left: 5px;
+    }
+    #modal .wrap .content ul li{
+        width: 110px;
+        margin-right: 5px;
+    }
+    #modal .wrap .content ul li:nth-child(2n){
+        margin-right: 0;
+    }
+    #modal .wrap .content ul li div:last-child{
+        width: 85px;
+        height: 85px;
     }
 }
 
@@ -408,6 +454,30 @@
         width: 462px;
         height: 357px;
     }
+
+    #modal .wrap{
+        width: 85vw;
+    }
+    #modal .wrap .content{
+        width: 460px;
+    }
+    #modal .wrap .content ul{
+        width: 450px;
+        padding-left: 15px;
+    }
+    #modal .wrap .content ul li{
+        width: 130px;
+        margin-right: 15px;
+    }#modal .wrap .content ul li:nth-child(2n){
+        margin-right: 15px;
+    }
+    #modal .wrap .content ul li:nth-child(3n){
+        margin-right: 0;
+    }
+    #modal .wrap .content ul li div:last-child{
+        width: 105px;
+        height: 105px;
+    }
 }
 
 /* 테블릿 */
@@ -430,5 +500,13 @@
         margin-top: 100px;
         padding-top: 50px;
         padding-right: 20px;
+    }
+
+    #modal .wrap{
+        width: 80vw;
+    }
+    #modal .wrap .content ul li div:last-child{
+        width: 105px;
+        height: 105px;
     }
 }

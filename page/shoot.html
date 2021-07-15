@@ -217,10 +217,42 @@
             <a href="#" class="btn"><i class="fas fa-times"></i></a>
             <div class="content">
                 <ul>
+                    <li>
+                        <div>
+                            <p>01</p>
+                            <p>하얀</p>
+                        </div>
+                        <div style="background-color: red;"></div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>01</p>
+                            <p>파랑</p>
+                        </div>
+                        <div style="background-color: blue;"></div>
+                    </li>
+                    <li>색3</li>
+                    <li>색4</li>
                     <li>색1</li>
+                    <li>색2</li>
+                    <li>색3</li>
+                    <li>색4</li>
                     <li>색1</li>
+                    <li>색2</li>
+                    <li>색3</li>
+                    <li>색4</li>
                     <li>색1</li>
+                    <li>색2</li>
+                    <li>색3</li>
+                    <li>색4</li>
                     <li>색1</li>
+                    <li>색2</li>
+                    <li>색3</li>
+                    <li>색4</li>
+                    <li>색1</li>
+                    <li>색2</li>
+                    <li>색3</li>
+                    <li>색4</li>
                 </ul>
             </div>
         </div>        
@@ -343,6 +375,24 @@
             $('#modal .btn').on('click',function(e){
                 e.preventDefault()
                 $('#modal').css({'display':'none'})
+            })
+
+            var str
+            $.ajax({
+                type: 'GET',
+                url : '../color.json',
+                dataType: 'json',
+                success:function(data){
+                    // for(var i = 0; i<data.length; i++){
+                    //     str += '<li><div><p>' + data.color.
+                            
+                    // }
+                },
+                error:function(request,status,error) {
+                    console.log("code:" + request.status);
+                    console.log("message:" + request.responseText);
+                    console.log("error:" + error);
+                }
             })
         })
     </script>
