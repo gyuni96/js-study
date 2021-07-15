@@ -109,10 +109,37 @@
 #info_studio{
     margin-bottom: 80px;
 }
-
+/* 모바일 세로 */
+@media screen and (max-width:479px) {
+    .content .img_author{
+        margin: 0 auto;
+        width: 270px;
+        height: 270px;
+    }
+    #info_author .content .info{
+        width: 270px;
+        /* height: 500px; */
+        margin:0;
+        margin-top: 40px;
+        text-align: center;
+        font-size: 0.85em;
+    }
+    #info_studio .img_studio{
+        margin: 0 auto;
+        width: 270px;
+        height: 151.875px;
+    }
+    #info_studio .content .info{
+        width: 270px;
+        /* height: 495px; */
+        margin: 0;
+        margin-top: 40px;
+        font-size: 0.85em;
+    }
+}
 
 /* 모바일 */
-@media screen and (max-width:767px) {
+@media screen and (min-width:480px)and (max-width:767px) {
     .content .img_author{
         margin: 0 auto;
         width: 380px;

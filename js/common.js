@@ -79,3 +79,6 @@ $(function(){
         return false
     })
 })
+
+// 새로고침할때 맨위로 복구
+history.scrollRestoration = "manual"

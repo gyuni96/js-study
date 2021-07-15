@@ -114,6 +114,8 @@ body{
     }
 }
 
+
+
 /* 푸터 */
 
 #main_footer{
@@ -145,6 +147,7 @@ body{
 
 /* 픽스버튼 */
 .fix_btn_gruop{
+
     z-index: 9999;
     position: fixed;
     bottom: 3%;
@@ -154,6 +157,7 @@ body{
     /* border: 1px solid red; */
     border-radius: 40px;
     background: #fff;
+    opacity: 0.8;
     margin-bottom: 5px;
     padding: 0 15px 0 5px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
@@ -178,10 +182,71 @@ body{
     padding-top: 7px;
     margin-left: 5px;
 }
-
-
-/* 모바일 */
-@media screen and (max-width:767px) {
+/* 모바일 세로 */
+@media screen and (max-width:479px) {
+    .container{
+        width: 270px;
+    }
+    #main_header .gnb .logo{
+        margin-left: 20px;
+    }
+    #main_header .gnb > .menu_list{
+        display: none;
+    }
+    #trigger{
+        display: block;
+        margin-right: 50px;
+        margin-top: 30px;
+        color: #fff;
+    }
+    #main_header .mobile_list{
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 9999;
+    }
+    #main_header .mobile_list > .end_btn{
+        position: absolute;
+        top: 15px;
+        margin-right: 10%;
+        z-index: 10;
+        padding: 5px;
+        font-size: 1.5em;
+        color: rgba(0, 0, 0, 0.8);
+    }
+    #main_header .mobile_list > ul{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-right: 10%;
+        padding-top: 80px;
+        
+        min-width: 65%;
+        min-height: 100%;
+        background-color: #fff;
+    }
+    #main_header .mobile_list > ul > li{
+        display: block;
+        width: 120px;
+        border-bottom: 1px solid #000;
+        text-align: right;
+        margin-bottom: 20px;
+        padding-bottom: 8px;
+    }
+    
+    #main_header .mobile_list > ul > li > a{
+        padding: 8px 0;
+        padding-left: 30px;    
+        font-size: 0.85em;
+    }
+    #main_footer .footer_txt .txt_group p{
+        font-size: 0.7em;
+    }
+}
+/* 모바일 가로, 테블릿 세로*/
+@media screen and (min-width:480px) and (max-width:767px) {
     .container{
         width: 480px;
     }
@@ -208,7 +273,7 @@ body{
     #main_header .mobile_list > .end_btn{
         position: absolute;
         top: 15px;
-        right: 42%;
+        right: 40%;
         z-index: 10;
         padding: 5px;
         font-size: 1.5em;
@@ -241,7 +306,7 @@ body{
 
 }
 
-/* 테블릿 */
+/* 테블릿 테블릿 가로*/
 @media screen and (min-width:768px) and (max-width:1023px){
     .container{
         width: 760px;
