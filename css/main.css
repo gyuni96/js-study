@@ -34,28 +34,35 @@
     /* position: absolute;
     top: 50%;
     left: 35%; */
-    margin-left: 25%;
+    margin-left: 23%;
 }
-#motto .motoo_txt p{
-    font-size: 2.5em;
+#motto .motoo_txt ul li{
+    font-size: 1.8em;
+    line-height: 1.9em;
 }
-p.typing-txt{
+#motto .motoo_txt ul li:first-child{
+    margin-left: 13%;
+}
+.typing-txt{
     display: none;
 }
-
-.typing {
+ul{
+    list-style:none;
+}
+.typing ul li{
+    display:block;
+}
+.typing ul li.on {  
     display: inline-block; 
     animation-name: cursor; 
     animation-duration: 0.3s; 
-    animation-iteration-count: infinite;
-    height: 1em;
-    line-height: 0.9em;
-    } 
+    animation-iteration-count: infinite; 
+} 
 @keyframes cursor{ 
     0%{border-right: 1px solid #fff} 
     50%{border-right: 1px solid #000} 
     100%{border-right: 1px solid #fff} 
-    }
+}
 
 /* 인스타그램 */
 
@@ -100,10 +107,15 @@ p.typing-txt{
 }
 @media screen and (max-width:479px) {
     #motto .motoo_txt{
-        margin-left: 16%;
+        margin-left: 13%;
     }
-    #motto .motoo_txt p{
-        font-size: 1em;
+    #motto .motoo_txt ul li{
+        font-size: 0.7em;
+        line-height: 1.5em;
+    }
+    #motto .motoo_txt ul li:first-child{
+        margin-left: 0;
+        font-size: 0.9em;
     }
     #instagram .insta_content{
         height: 795px;
@@ -128,8 +140,9 @@ p.typing-txt{
     #motto .motoo_txt{
         margin-left: 20%;
     }
-    #motto .motoo_txt p{
-        font-size: 1.7em;
+    #motto .motoo_txt ul li{
+        font-size: 1em;
+        line-height: 1.5em;
     }
 }
 
@@ -151,6 +164,6 @@ p.typing-txt{
     }
 
     #motto .motoo_txt{
-        margin-left: 20%;
+        margin-left: 17%;
     }
 }
