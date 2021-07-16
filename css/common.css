@@ -88,8 +88,8 @@ body{
 .end_btn:hover{
     animation: rotation 0.3s ease-in;
 }
-#main_header .mobile_list ul li a:hover{
-    animation: up 0.3s ease-out;
+#main_header .mobile_list{
+    vertical-align: right;
 }
 @keyframes up {
     0%{
@@ -119,6 +119,7 @@ body{
 /* 푸터 */
 
 #main_footer{
+    padding-top: 30px;
     width: 100%;
     height: 170px;
     background: #383838;
@@ -161,6 +162,9 @@ body{
     margin-bottom: 5px;
     padding: 0 15px 0 5px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
+}
+.fix_btn_gruop .btn.top{
+    display: none;
 }
 .fix_btn_gruop .btn a div{
     display: flex;
