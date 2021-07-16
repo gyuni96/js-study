@@ -9,6 +9,8 @@ $(function(){
             $('.gnb').css({animationName : 'fade'})
             $('.gnb').css({animationDuration : '0.3s'})
             $('.gnb .menu_list li a').css({color : '#000'})
+            $('#trigger').css({'color':'#000'})
+            $('.logo').css({'color':'#000'})
             
         }else if(scroll_top == 0){
             $('.gnb').css({background:'rgba(255, 255, 255, 0)'})
@@ -16,11 +18,11 @@ $(function(){
             $('.gnb').css({animationDuration : '0.3s'})
             
             $('.gnb .menu_list li a').css({'color' : '#fff'})
+            $('#trigger').css({'color':'#fff'})
+            $('.logo').css({'color':'#fff'})
+
         }
     })
-    //해야될것
-
-    // 마우스 오버시 이벤트 , 이미지슬라이드, 모달창 , api구현
     
     // 모바일 메뉴
     var menuDuration = 700
@@ -77,3 +79,6 @@ $(function(){
         return false
     })
 })
+
+// 새로고침할때 맨위로 복구
+history.scrollRestoration = "manual"

@@ -3,13 +3,22 @@
 /* 메인 이미지 */
 #main_header .main_img{
     width: 100%;
-    height: 600px;
-    background-color: aquamarine;
+    height: 500px;
+    background:url(../img/bg.png);
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: center -325px;
+    padding-top: 250px;
+}
+#main_header .main_img p{
+    text-align: center;
+    /* line-height: 500px; */
+    color: #fff;
+    font-size: 1.6em;
 }
 
-
 /* 타이틀 */
-#map .map_title{
+#map_wrap .map_title{
     margin-top: 80px;
     font-size: 2.25em;
     line-height: 2.25em;
@@ -19,20 +28,20 @@
 }
 
 /* 내용 */
-#map .map_description{
+#map_wrap .map_description{
     font-size: 1.125em;
     line-height: 1.125em;
     margin-bottom: 40px;
     margin-left: 20px;
 }
-#map .map_description p{
+#map_wrap .map_description p{
     margin-bottom: 20px;
 }
-#map .map_description p span{
+#map_wrap .map_description p span{
     font-size: 0.75em;
     margin-left: 5px;
 }
-#map .map_description p span .mark{
+#map_wrap .map_description p span .mark{
     color: #fff;
     border-radius: 5px;
     background: #a9cfff;
@@ -40,19 +49,74 @@
     margin-right: 3px;
 }
 /* 맵 */
-#map .map{
+#map{
     width: 100%;
     height: 470px;
     background: #a9cfff;
     margin-bottom: 70px;
 }
+.map_info{
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 15px;
+    border: 1px solid #2F96FC;
+    width: 270px;
+    opacity: 0.9;
+    margin-top: -55px;
+    position: relative;
+}
+.map_info::after{
+    content: "";
+    position: absolute;
+    border-top:0px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #2F96FC;
+    top: 85px;
+    left: 124px;
+    transform: rotate(180deg);
+}
+.map_info h3{
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.map_info p{
+    font-size: 0.85em;
+    margin-bottom: 3px;
+}
+@media screen and (max-width:479px) {
+    #map_wrap .map_title{
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    #map_wrap .map_description p {
+        font-size: 0.7em;
+        margin-bottom: 15px;
+    }
+    #map_wrap .map_description p > span{
+        display: block;
+        /* margin-left: 60px; */
+        margin-top: 5px;
+    }
+    #map{
+        width: 100%;
+        height: 270px;
+    }
+}
 
 /* 모바일 */
-@media screen and (max-width:767px) {
-    
+@media screen and (min-width:480px)and (max-width:767px) {
+    #map_wrap .map_description p > span{
+        display: block;
+        margin-left: 60px;
+        margin-top: 5px;
+    }
 }
 
 /* 테블릿 */
-@media all and (min-width:768px) and (max-width:1023px){
-    
+@media screen and (min-width:768px) and (max-width:1023px){
+    body{
+        overflow-x: hidden;
+    }
 }

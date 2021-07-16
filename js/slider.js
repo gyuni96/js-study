@@ -1,6 +1,4 @@
 $(function(){
-    
-
     var $slider = $('.slider'),
         $firstSlide = $slider.find('li').first() // 첫번째 슬라이드
         .stop(true).animate({'opacity':1},200); // 첫번째 슬라이드만 보이게 하기

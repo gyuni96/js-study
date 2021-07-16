@@ -8,9 +8,9 @@
     <!-- 폰트어썸 -->
     <script src="https://kit.fontawesome.com/67daea8931.js" crossorigin="anonymous"></script>
     <!-- 구글폰트 Noto serif KR -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
     <!-- css -->
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/map.css">
@@ -18,12 +18,18 @@
 <body>
     <header id="main_header">
         <div class="gnb">
-            <a href="#" class="logo">logo</a>
+            <a href="../index.html" class="logo">당소담 사진관</a>
             <ul class="menu_list">
                 <li><a href="../index.html" class="home">홈</a></li>
+<<<<<<< HEAD
                 <li><a href="./info.html" class="info">당소담 소개</a></li>
                 <li><a href="./shoot.html" class="shoot">촬영</a></li>
                 <li><a href="./map.html" class="map">오시는길</a></li>
+=======
+                <li><a href="../page/info.html" class="info">당소담 소개</a></li>
+                <li><a href="../page/shoot.html" class="shoot">촬영</a></li>
+                <li><a href="../page/map.html" class="map">오시는길</a></li>
+>>>>>>> eaf3e4f7c3f24b468370b7ce22353c0f79d3bc26
             </ul>
             <a id="trigger" href="#"><i class="fas fa-bars"></i></a>
         </div>
@@ -31,16 +37,22 @@
             <a href="#" class="end_btn"><i class="fas fa-times"></i></a>
             <ul>
                 <li><a href="../index.html" class="home">홈</a></li>
+<<<<<<< HEAD
                 <li><a href="./info.html" class="info">당소담 소개</a></li>
                 <li><a href="./shoot.html" class="shoot">촬영</a></li>
                 <li><a href="./map.html" class="map">오시는길</a></li>
+=======
+                <li><a href="../page/info.html" class="info">당소담 소개</a></li>
+                <li><a href="../page/shoot.html" class="shoot">촬영</a></li>
+                <li><a href="../page/map.html" class="map">오시는길</a></li>
+>>>>>>> eaf3e4f7c3f24b468370b7ce22353c0f79d3bc26
             </ul>
         </div>
         <div class="main_img">
-            main_img
+            <p>오시는 길</p>
         </div>
     </header>
-    <section id="map">
+    <section id="map_wrap">
         <div class="container">
             <div class="map_title">
                 <h3>당소담 사진관</h3>
@@ -50,7 +62,7 @@
                 <p>전화번호 : 010.5497.1157</p>
                 <p>영업시간 : 11:00 - 20:00 / 매주 월,화요일 휴무</p>
             </div>
-            <div class="map">
+            <div id="map">
 
             </div>
         </div>
@@ -65,7 +77,7 @@
             </a>
         </div>
         <div class="btn kakao">
-            <a href="#">
+            <a href="https://pf.kakao.com/_fxdjfs/friend" target="_blank">
                 <div>
                     <img src="../img/kakaoch.png" alt="kakao">
                     <p>카톡</p>
@@ -73,10 +85,18 @@
             </a>
         </div>
         <div class="btn toktok">
-            <a href="#">
+            <a href="https://talk.naver.com/ct/w4o5yb" target="_blank">
                 <div>
                     <img src="../img/toktok.png" alt="toktok">
                     <p>톡톡</p>
+                </div>
+            </a>
+        </div>
+        <div class="btn book">
+            <a href="https://booking.naver.com/booking/6/bizes/530095" target="_blank">
+                <div>
+                    <img src="../img/book.png" alt="book">
+                    <p>예약</p>
                 </div>
             </a>
         </div>
@@ -85,8 +105,8 @@
         <div class="container">
             <div class="footer_sns">
                 <div class="sns_group">
-                    <a href="#"><i class="fas fa-sms"></i></a>
-                    <a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://pf.kakao.com/_fxdjfs/friend" target="_blank"><i class="fas fa-sms"></i></a>
+                    <a href="https://www.instagram.com/dangsodam/" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="footer_txt">
@@ -98,7 +118,9 @@
         </div>
     </footer>
 
-    <script src="../js/jquery/jquery-3.6.0.js"></script>
+    <script src="../js/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ufaqlopu13"></script>
     <script src="../js/common.js"></script>
+    <script src="../js/map.js"></script>
 </body>
 </html>

@@ -8,17 +8,18 @@
     <!-- 폰트어썸 -->
     <script src="https://kit.fontawesome.com/67daea8931.js" crossorigin="anonymous"></script>
     <!-- 구글폰트 Noto serif KR -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
     <!-- css -->
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
     <header id="main_header">
         <div class="gnb">
-            <a href="#" class="logo">logo</a>
+            <a href="./index.html" class="logo">당소담 사진관</a>
             <ul class="menu_list">
                 <li><a href="./index.html" class="home">홈</a></li>
                 <li><a href="./page/info.html" class="info">당소담 소개</a></li>
@@ -27,7 +28,7 @@
             </ul>
             <a id="trigger" href="#"><i class="fas fa-bars"></i></a>
         </div>
-        <div class="mobile_list" align="right">
+        <div class="mobile_list" >
             <a href="#" class="end_btn"><i class="fas fa-times"></i></a>
             <ul>
                 <li><a href="./index.html" class="home">홈</a></li>
@@ -37,14 +38,24 @@
             </ul>
         </div>
         <div class="main_img">
-            main_img
+            <p>당소담 사진관</p>
         </div>
     </header>
     <section id="motto">
         <div class="container">
             <div class="motoo_txt">
-                <p class="typing-txt">당신의 소중한 순간을 담아 🌿</p>
-                <p class="typing"></p>
+                <div class="typing-txt">
+                    <ul>
+                        <li>당신의 소중한 순간을 담아 🌿</li>
+                        <li>Take a picture of your precious moments.</li>
+                    </ul>
+                </div>
+                <div class="typing">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -54,8 +65,8 @@
                 <div class="insta_title">
                     <p>INSTAGRAM</p>
                 </div>
-                <div class="insta_content">
-                    <!-- 임시 박스 레이아웃용 -->
+                <ul class="insta_content" id="gallery">
+                    <!-- 임시 박스 레이아웃용
                     <div class="box"></div>
                     <div class="box"></div>
                     <div class="box"></div>
@@ -70,8 +81,8 @@
                     <div class="box"></div>
                     <div class="box"></div>
                     <div class="box"></div>
-                    <div class="box"></div>
-                </div>
+                    <div class="box"></div> -->
+                </ul>
                 <div class="insta_more">
                     <a href="#" class="more_btn">더보기</a>
                 </div>
@@ -88,7 +99,7 @@
             </a>
         </div>
         <div class="btn kakao">
-            <a href="#">
+            <a href="https://pf.kakao.com/_fxdjfs/friend" target="_blank">
                 <div>
                     <img src="./img/kakaoch.png" alt="kakao">
                     <p>카톡</p>
@@ -96,10 +107,18 @@
             </a>
         </div>
         <div class="btn toktok">
-            <a href="#">
+            <a href="https://talk.naver.com/ct/w4o5yb" target="_blank">
                 <div>
                     <img src="./img/toktok.png" alt="toktok">
                     <p>톡톡</p>
+                </div>
+            </a>
+        </div>
+        <div class="btn book">
+            <a href="https://booking.naver.com/booking/6/bizes/530095" target="_blank">
+                <div>
+                    <img src="./img/book.png" alt="book">
+                    <p>예약</p>
                 </div>
             </a>
         </div>
@@ -108,8 +127,8 @@
         <div class="container">
             <div class="footer_sns">
                 <div class="sns_group">
-                    <a href="#"><i class="fas fa-sms"></i></a>
-                    <a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://pf.kakao.com/_fxdjfs/friend" target="_blank"><i class="fas fa-sms"></i></a>
+                    <a href="https://www.instagram.com/dangsodam/" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="footer_txt">
@@ -120,15 +139,10 @@
             </div>
         </div>
     </footer>
-    
-    <script src="./js/jquery/jquery-3.6.0.js"></script>
+    <script src="./js/jquery/jquery-3.6.0.min.js"></script>
+    <script src="./js/instagram/instafeed.min.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/text.js"></script>
     <script src="./js/main.js"></script>
-    <!-- <script>
-        $(function(){
-            
-        })
-    </script> -->
 </body>
 </html>
