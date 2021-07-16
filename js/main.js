@@ -11,20 +11,20 @@ $(function(){
         e.preventDefault()
         var doc = $(document).width()
         if(doc >= 1024){
-            $('.insta_content').css({height : '1600px'})
+            $('.insta_content').css({height : '1970px'})
         }else if(doc < 1024 && doc >767){
-            $('.insta_content').css({height : '1280px'})
-        }else if(doc < 765 && doc > 480){
             $('.insta_content').css({height : '1600px'})
+        }else if(doc < 765 && doc > 480){
+            $('.insta_content').css({height : '1975px'})
         }else{
-            $('.insta_content').css({height : '1590px'})
+            $('.insta_content').css({height : '1980px'})
         }
         $('.more_btn').hide()
     })
 })
 
 // 인스타그램 호출
-var token = 'IGQVJXUnNzeEI2ZA2JYaEtUWGt6dkV3S3VfeVRCSWlpNHBFZAkFoYksyVl9SSzQzSThrTEUxZAmZAiMHY4WGc0LWZAEcUxGa1duYlNDSk82RlkwaHpzczU5LWhjNmg0a1NaVnFGNWVFeGpuRVpwMldMYndycgZDZD'
+var token = 'IGQVJXZAVNRQTV1ZAzA3UE9WUFlpbjZAjYldrUnhOSzNJTHFDdmNrdG8ySzlvNUFncDhsRjdZASUlET2JWUXFGYVQtTzRhTW05V0ZAOc0t3S25FSmRDa0FmYmJlUFFBdms1dVk5bFdYdk1OMWQtcmVaeGhYdwZDZD'
 var feed = new Instafeed({
     target : 'gallery',
     template : '<li class="box"><a href="{{link}}"><img title="{{caption}}" src="{{image}}" sizes="cover" /></a></li>',
