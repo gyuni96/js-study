@@ -21,7 +21,15 @@ body{
     width: 980px;
     margin: 0 auto;
 }
-
+.blank{
+    display: none;
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
 /* 헤더 */
 
 #main_header .gnb{
@@ -87,9 +95,6 @@ body{
 }
 .end_btn:hover{
     animation: rotation 0.3s ease-in;
-}
-#main_header .mobile_list{
-    vertical-align: right;
 }
 @keyframes up {
     0%{
@@ -185,6 +190,7 @@ body{
 .fix_btn_gruop .btn a div p{
     padding-top: 7px;
     margin-left: 5px;
+    font-size: 0.8em;
 }
 /* 모바일 세로 */
 @media screen and (max-width:479px) {
@@ -206,29 +212,32 @@ body{
     #main_header .mobile_list{
         display: none;
         position: fixed;
-        width: 100%;
+        top: 0;
+        right: 0;
+        width: 50%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.3);
+        
         z-index: 9998;
     }
     #main_header .mobile_list > .end_btn{
         position: absolute;
         top: 15px;
-        margin-right: 10%;
+        left: 15px;
         z-index: 10;
         padding: 5px;
         font-size: 1.5em;
         color: rgba(0, 0, 0, 0.8);
     }
-    #main_header .mobile_list > ul{
-        position: absolute;
-        top: 0;
-        right: 0;
+    #main_header .mobile_list >ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        
         padding-right: 10%;
         padding-top: 80px;
         
-        min-width: 65%;
-        min-height: 100%;
+        width: 100%;
+        height: 100%;
         background-color: #fff;
     }
     #main_header .mobile_list > ul > li{
@@ -269,29 +278,30 @@ body{
     #main_header .mobile_list{
         display: none;
         position: fixed;
-        width: 100%;
+        top: 0;
+        right: 0;
+        width: 50%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.3);
         z-index: 9999;
     }
     #main_header .mobile_list > .end_btn{
         position: absolute;
         top: 15px;
-        right: 40%;
+        left: 20px;
         z-index: 10;
         padding: 5px;
         font-size: 1.5em;
-        color: rgba(0, 0, 0, 0.8);
+        
     }
     #main_header .mobile_list > ul{
-        position: absolute;
-        top: 0;
-        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
         padding-right: 55px;
         padding-top: 80px;
         
-        min-width: 50%;
-        min-height: 100%;
+        width: 100%;
+        height: 100%;
         background-color: #fff;
     }
     #main_header .mobile_list > ul > li{

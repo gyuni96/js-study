@@ -29,19 +29,21 @@ $(function(){
     // 열기
     function showMenu(){
         $('.mobile_list').css({'display' : 'block'})
-        $('.mobile_list ul').css({'right' : '-100%'})
-        $('.mobile_list .end_btn').css({'right' : '-100%'})
+        $('.mobile_list').css({'right' : '-100%'})
+        $('.blank').css({'display' : 'block'})
 
-        $('.mobile_list ul').animate({right : '0px'} , {duration : menuDuration})
-        $('.mobile_list .end_btn').animate({right : '42%'}, {duration : menuDuration})
+        $('.mobile_list').animate({right : '0'},400)
     }
     // 닫기
     function hideMneu(){
-        $('.mobile_list ul').animate({right : '-100%'} , {duration : menuDuration})
-        $('.mobile_list .end_btn').animate({right : '-100%'}, {duration : menuDuration})
+
+        $('.mobile_list').animate({right : '-100%'},400)
+
         setTimeout(function(){
             $('.mobile_list').css({'display' : 'none'})
+            $('.blank').css({'display' : 'none'})
         },400)
+        
     }
 
     $('#trigger').on('click', function(e){

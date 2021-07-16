@@ -5,55 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/slider.css">
+    <style>
+        .blank{
+            display: block;
+            background: rgba(0, 0, 0, 0.3);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
 </head>
 <body>
-    <ul class="slider id_img shoot_img">
-        <li>
-            <img src="http://placehold.it/400x518" alt="#">
-        </li>
-        <li>
-            <img src="http://placehold.it/400x518" alt="#">
-        </li>
-        <li>
-            <img src="http://placehold.it/400x518" alt="#">
-        </li>
-        <li>
-            <img src="http://placehold.it/400x518" alt="#">
-        </li>
-    </ul>
-    <script src="./js/jquery/jquery-3.6.0.js"></script>
-    <script src="./js/slider.js"></script>
-=======
-</head>
-<body>
-    <ul>
-
-    </ul>
-    <script src="./js/jquery/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function(){
-
-            
-            $.getJSON('https://gist.githubusercontent.com/Gyunnam/36eea8d690e03323a110fb04058e5d4e/raw/33fef9375a83f3017f3631a4162dc8f84ab702b9/color.json', function(data){
-                var str = ''
-                
-                var maxIdx = 3
-                for(var i = 0 ; i < maxIdx; i++){
-                    str += '<li>'
-                    str += '<div>'
-                    str += '<p>' + data.color[i].num + '</p>'
-                    str += '<p>' + data.color[i].kr + '</p>'
-                    str += '</div>'
-                    str += '<div style = "background-color:' + data.color[i].code + ';"></div>'
-                }
-                console.log(str)
-                $('#modal ul').html(str)
-            })    
-        })
-    </script>
->>>>>>> eaf3e4f7c3f24b468370b7ce22353c0f79d3bc26
+    <div class="blank"></div>
 </body>
 </html>
