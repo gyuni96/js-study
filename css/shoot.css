@@ -119,8 +119,11 @@
 }.shoot_description p:last-child{
     margin-bottom: 0;
 }
+.info_box{
+    transition: 0.4s;
+}
 .info_box:hover{
-    animation: up 0.5s ease-in;
+    transform: translateY(-10px);
 }
 
 /* 모달 */
@@ -135,7 +138,7 @@
     padding: 12px 30px;
 }
 .modal_wrap .modal_btn:hover{
-    background: #704b34;
+    background: rgb(87, 87, 87);
     color: #fff;
     cursor: pointer;
 }
@@ -172,9 +175,10 @@
     color: rgb(26, 26, 26);
     font-size: 1.5em;
     padding: 5px;
+    transition: 0.3s;
 }
 #modal .wrap .btn:hover{
-    animation: rotation 0.4s ease;
+    transform: rotate(90deg);
 }
 #modal .wrap .title{
     text-align: center;
@@ -237,7 +241,7 @@
 }
 #modal .wrap .content ul li div p:last-child{
     margin-top: 5px;
-    writing-mode: tb-rl;
+    line-height: 1.1em;
 }
 /* 촬영 구성 */
 
