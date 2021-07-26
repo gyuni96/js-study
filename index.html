@@ -1,35 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/67daea8931.js" crossorigin="anonymous"></script>
+    <!-- 스타일시트 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main.css">
+    
 </head>
 <body>
-    <nav class="navbar navbar-default">
-        <div class="container">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">MovieInfo</a>
+  <!-- 헤더 -->
+    <header id="main_header">
+      <div class="wrap">
+        <a href="./index.html" class="logo">LOGO</a>
+        <ul class="nav_wrap">
+          <li><a href="./page/moive.html">Movie</a></li>
+          <li><a href="./page/tv.html">TV</a></li>
+          <li><a href="./page/search.html">Search</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- 메인컨텐츠 -->
+    <div id="main_content">
+      <div class="wrap">
+        <div class="bg">
+          <p>Welcome.</p>
+          <p>GYUNFLIX provides various information about the Movie, TV.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- 서브 컨텐츠 -->
+    <div id="sub_content">
+      <div class="wrap">
+        
+        <!-- 영화 -->
+        <div id="movie_popular">
+          <div class="control">
+            <a href="#"><i class="fas fa-arrow-left left"></i></a>
+            <a href="#"><i class="fas fa-arrow-right right"></i></a>
+          </div>
+          <p>Movie Popular</p>
+          <ul>
+            <li>
+              <img src="http://placehold.it/150x225" alt="poster" class="movie_poster">
+              <div class="movie_score">
+                <p>5</p>
+              </div>
+              <div class="movie_detail">
+                <p>영화제목</p>
+                <p>개봉날짜</p>
+              </div>
+            </li>
+            <li>
+              <img src="http://placehold.it/150x225" alt="poster" class="movie_poster">
+              <div class="movie_score">
+                <p>5</p>
+              </div>
+              <div class="movie_detail">
+                <p>영화제목</p>
+                <p>개봉날짜</p>
+              </div>
+            </li>
+            <li>
+              <img src="http://placehold.it/150x225" alt="poster" class="movie_poster">
+              <div class="movie_score">
+                <p>5</p>
+              </div>
+              <div class="movie_detail">
+                <p>영화제목</p>
+                <p>개봉날짜</p>
+              </div>
+            </li>
+            <li>
+              <img src="http://placehold.it/150x225" alt="poster" class="movie_poster">
+              <div class="movie_score">
+                <p>5</p>
+              </div>
+              <div class="movie_detail">
+                <p>영화제목</p>
+                <p>개봉날짜</p>
+              </div>
+            </li>
+            <li>
+              <img src="http://placehold.it/150x225" alt="poster" class="movie_poster">
+              <div class="movie_score">
+                <p>5</p>
+              </div>
+              <div class="movie_detail">
+                <p>영화제목</p>
+                <p>개봉날짜</p>
+              </div>
+            </li>
+            <li>
+              <img src="http://placehold.it/150x225" alt="poster" class="movie_poster">
+              <div class="movie_score">
+                <p>5</p>
+              </div>
+              <div class="movie_detail">
+                <p>영화제목</p>
+                <p>개봉날짜</p>
+              </div>
+            </li>
+            <li>
+              <img src="http://placehold.it/150x225" alt="poster" class="movie_poster">
+              <div class="movie_score">
+                <p>5</p>
+              </div>
+              <div class="movie_detail">
+                <p>영화제목</p>
+                <p>개봉날짜</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- tv -->
+        <div id="tv_popular">
+          <div class="control">
+            <a href="#"><i class="fas fa-arrow-left left"></i></a>
+            <a href="#"><i class="fas fa-arrow-right right"></i></a>
+          </div>
+          <p>TV Popular</p>
+          <ul>
+            <li>
+              <img src="http://placehold.it/150x225" alt="poster" class="tv_poster">
+              <div class="tv_score">
+                <p>5</p>
+              </div>
+              <div class="tv_detail">
+                <p>영화제목</p>
+                <p>개봉날짜</p>
+              </div>
+            </li>
+            <li>
+              <img src="http://placehold.it/150x225" alt="poster" class="tv_poster">
+              <div class="tv_score">
+                <p>5</p>
+              </div>
+              <div class="tv_detail">
+                <p>영화제목</p>
+                <p>개봉날짜</p>
+              </div>
+            </li>
+            <li>
+              <img src="http://placehold.it/150x225" alt="poster" class="tv_poster">
+              <div class="tv_score">
+                <p>5</p>
+              </div>
+              <div class="tv_detail">
+                <p>영화제목</p>
+                <p>개봉날짜</p>
+              </div>
+            </li>
+            <li>
+              <img src="http://placehold.it/150x225" alt="poster" class="tv_poster">
+              <div class="tv_score">
+                <p>5</p>
+              </div>
+              <div class="tv_detail">
+                <p>영화제목</p>
+                <p>개봉날짜</p>
+              </div>
+            </li>
+            <li>
+              <img src="http://placehold.it/150x225" alt="poster" class="tv_poster">
+              <div class="tv_score">
+                <p>5</p>
+              </div>
+              <div class="tv_detail">
+                <p>영화제목</p>
+                <p>개봉날짜</p>
+              </div>
+            </li>
+            <li>
+              <img src="http://placehold.it/150x225" alt="poster" class="tv_poster">
+              <div class="tv_score">
+                <p>5</p>
+              </div>
+              <div class="tv_detail">
+                <p>영화제목</p>
+                <p>개봉날짜</p>
+              </div>
+            </li>
+            <li>
+              <img src="http://placehold.it/150x225" alt="poster" class="tv_poster">
+              <div class="tv_score">
+                <p>5</p>
+              </div>
+              <div class="tv_detail">
+                <p>영화제목</p>
+                <p>개봉날짜</p>
+              </div>
+            </li>
+            <li>
+              <img src="http://placehold.it/150x225" alt="poster" class="tv_poster">
+              <div class="tv_score">
+                <p>5</p>
+              </div>
+              <div class="tv_detail">
+                <p>영화제목</p>
+                <p>개봉날짜</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- <div id="detail">
+      <div class="wrap">
+        <img src="" alt="#" class="img">
+        <div class="text">
+          <div class="title">
+            <p>영화 제목</p>
+          </div>
+          <div class="info">
+            <ul>
+              <li>년도</li>
+              <li>런타임</li>
+              <li>장르</li>
+            </ul>
+          </div>
+          <div class="description">
+            <p>내용내용내용</p>
           </div>
         </div>
-      </nav>
-  
-      <div class="container">
-          <div class="jumbotron">
-              <h3 class="text-center">Search For Any Movie</h3>
-              <form id="searchForm">
-                  <input type="text" class="form-control" id="searchText" placeholder="Search Movies...">
-              </form>
-          </div>
       </div>
-  
-      <div class="container">
-        <div id="movies" class="row"></div>
-        <div id="poster"></div>
+    </div> -->
+
+    <!-- 푸터 -->
+    <footer id="main_footer">
+      <div class="wrap">
+        <div class="content">
+          <p>GYUNFLIX</p>
+          <p>Copyright 2021. Gyunnam</p>
+        </div>
       </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./js/main.js"></script>

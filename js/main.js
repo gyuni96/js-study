@@ -19,8 +19,8 @@
 // }
 var api_basic = 'https://api.themoviedb.org/3/'
 var api_key = '?api_key=c45b33f39988e53b642592a7241ef43b&language=ko'
-var img = 'https://image.tmdb.org/t/p/사이즈/'
-function upComing(){
+var img = 'https://image.tmdb.org/t/p/' // 사이즈 추가할거 / 
+function popularMovie(){
     axios.get(api_basic + 'movie/popular' + api_key)
         .then((res)=>{
             var upmovies = res.data.results;
@@ -36,7 +36,7 @@ function upComing(){
         })
         //뽑아 내기 
 }
-upComing()
+popularMovie()
 
 function getImg(){
     axios.get(api_basic+'movie/'+ 아이디 +'/images'+api_key)
