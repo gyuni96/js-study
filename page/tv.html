@@ -9,10 +9,11 @@
     <script src="https://kit.fontawesome.com/67daea8931.js" crossorigin="anonymous"></script>
     <!-- 스타일시트 -->
     <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/tv.css">
     
 </head>
 <body>
-<!-- 헤더 -->
+    <!-- 헤더 -->
     <header id="main_header">
         <div class="wrap">
             <a href="../index.html" class="logo">LOGO</a>
@@ -23,7 +24,29 @@
             </ul>
         </div>
     </header>
-        <!-- 푸터 -->
+    <!-- 컨텐츠 -->
+    <div id="tv">
+        <div id="tv_popular">
+            <span>Popular Movie</span>
+            <div class="popular_group">
+                
+            </div>
+        </div>
+        <div id="tv_now">
+            <span>Today Movie</span>
+            <div class="now_group">
+                
+            </div>
+        </div>
+        <div id="upcoming">
+            <span>Upcoming Movie</span>
+            <div class="upcoming_group">
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- 푸터 -->
     <footer id="main_footer">
         <div class="wrap">
         <div class="content">
@@ -34,6 +57,11 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
+    <script src="../js/api.js"></script>
+    <script>
+        tvPopular()
+        tvNow()
+        tvUpcoming()
+    </script>
 </body>
 </html>

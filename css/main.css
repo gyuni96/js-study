@@ -33,6 +33,7 @@
 #sub_content .control{
     position: relative;
     font-size: 1.5em;
+    z-index: 5;
 }
 #sub_content .control .left{
     position: absolute;
@@ -54,34 +55,50 @@
 }
 #movie_popular{
     margin-bottom: 15px;
+    height: 340px;
+}
+#tv_popular{
+    height: 340px;
 }
 #movie_popular > p,
 #tv_popular > p{
     font-size: 1.3em;
     margin-bottom: 25px;
 }
-#movie_popular > ul,
-#tv_popular > ul{
-    display: flex;
+#movie_popular > .slide_group,
+#tv_popular >.slide_group{
+    position: relative;
     overflow-x: hidden;
+    height: 100%;
 }
-#movie_popular > ul > li,
-#tv_popular > ul > li{
+#movie_popular > .slide_group > ul,
+#tv_popular > .slide_group > ul{
+    display: flex;
+    width: 1645px;
+    
+    position : absolute;
+    top: 0;
+    left: 0;
+}
+#movie_popular > .slide_group > ul > li,
+#tv_popular > .slide_group > ul > li{
     position: relative;
     margin-left: 15px;
 }
-#movie_popular > ul > li:first-child,
-#tv_popular > ul > li:first-child{
+/* #movie_popular > .slide_group > ul > li:first-child,
+#tv_popular > .slide_group > ul > li:first-child{
     margin-left: 10px;
-}
-#movie_popular > ul > li > .movie_poster,
-#tv_popular > ul > li > .tv_poster{
+} */
+#movie_popular > .slide_group > ul > li > a >.movie_poster,
+#tv_popular > .slide_group > ul > li > a > .tv_poster{
     margin-bottom: 20px;
     border-radius: 5px;
-    box-shadow: 6px 6px 10px rgb(95, 95, 95);
+    width: 150px;
+    height: 225px;
+    /* box-shadow: 3px 3px 10px rgb(95, 95, 95); */
 }
-#movie_popular > ul > li > .movie_score,
-#tv_popular > ul > li > .tv_score{
+#movie_popular > .slide_group > ul > li > a >.movie_score,
+#tv_popular > .slide_group > ul > li > a >.tv_score{
     position: absolute;
     border-radius: 100px;
     background-color: #000;
@@ -91,27 +108,32 @@
     height: 40px;
     border: 3px solid rgb(48, 255, 48);
 }
-#movie_popular > ul > li > .movie_score > p,
-#tv_popular > ul > li > .tv_score > p {
+#movie_popular > .slide_group > ul > li > a >.movie_score > p,
+#tv_popular > .slide_group > ul > li > a >.tv_score > p {
     color: #fff;
     text-align: center;
     margin-top: 10px;
     font-size: 0.9em;
     
 }
-#movie_popular > ul > li > .movie_detail,
-#tv_popular > ul > li > .tv_detail{
+#movie_popular > .slide_group > ul > li >a > .movie_detail,
+#tv_popular > .slide_group > ul > li >a > .tv_detail{
     padding-bottom: 10px
 }
-#movie_popular > ul > li > .movie_detail > p:first-child,
-#tv_popular > ul > li > .tv_detail > p:first-child{
+#movie_popular > .slide_group > ul > li >a > .movie_detail > p:first-child,
+#tv_popular > .slide_group > ul > li >a > .tv_detail > p:first-child{
     margin-bottom: 6px;
     font-size: 1.1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 150px;
 }
-#movie_popular > ul > li > .movie_detail > p:last-child,
-#tv_popular> ul > li > .tv_detail > p:last-child{
+#movie_popular > .slide_group > ul > li >a > .movie_detail > p:last-child,
+#tv_popular> .slide_group > ul > li > a >.tv_detail > p:last-child{
     color: rgb(83, 83, 83);
     font-size: 0.9em;
+    
 }
 
 /* #detail{

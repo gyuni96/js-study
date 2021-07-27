@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        #movie_popular{
+    margin-bottom: 15px;
+    height: 340px;
+}
+#tv_popular{
+    height: 340px;
+}
+#movie_popular > p,
+#tv_popular > p{
+    font-size: 1.3em;
+    margin-bottom: 25px;
+}
+#movie_popular > .slide_group,
+#tv_popular >.slide_group{
+    position: relative;
+}
+#movie_popular > .slide_group > ul,
+#tv_popular > .slide_group > ul{
+    display: flex;
+    overflow-x: hidden;
+    position : absolute;
+    top: 0;
+    left: 0;
+}
+#movie_popular > .slide_group > ul > li,
+#tv_popular > .slide_group > ul > li{
+    position: relative;
+    margin-left: 15px;
+}
+#movie_popular > .slide_group > ul > li:first-child,
+#tv_popular > .slide_group > ul > li:first-child{
+    margin-left: 10px;
+}
+#movie_popular > .slide_group > ul > li > .movie_poster,
+#tv_popular > .slide_group > ul > li > .tv_poster{
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 6px 6px 10px rgb(95, 95, 95);
+}
+#movie_popular > .slide_group > ul > li > .movie_score,
+#tv_popular > .slide_group > ul > li > .tv_score{
+    position: absolute;
+    border-radius: 100px;
+    background-color: #000;
+    top: 200px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgb(48, 255, 48);
+}
+#movie_popular > .slide_group > ul > li > .movie_score > p,
+#tv_popular > .slide_group > ul > li > .tv_score > p {
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9em;
+    
+}
+#movie_popular > .slide_group > ul > li > .movie_detail,
+#tv_popular > .slide_group > ul > li > .tv_detail{
+    padding-bottom: 10px
+}
+#movie_popular > .slide_group > ul > li > .movie_detail > p:first-child,
+#tv_popular > .slide_group > ul > li > .tv_detail > p:first-child{
+    margin-bottom: 6px;
+    font-size: 1.1em;
+}
+#movie_popular > .slide_group > ul > li > .movie_detail > p:last-child,
+#tv_popular> .slide_group > ul > li > .tv_detail > p:last-child{
+    color: rgb(83, 83, 83);
+    font-size: 0.9em;
+}
+    </style>
+</head>
+<body>
+    <div id="movie_popular">
+        <div class="control">
+            <a href="#"><i class="fas fa-arrow-left left"></i></a>
+            <a href="#"><i class="fas fa-arrow-right right"></i></a>
+        </div>
+        <p>Movie Popular</p>
+        <div class="slide_group">
+            <ul class="slide">
+                <li>
+                    <img src="http://placehold.it/150x225" alt="poster" class="movie_poster">
+                    <div class="movie_score">
+                        <p>5</p>
+                    </div>
+                    <div class="movie_detail">
+                        <p>영화제목</p>
+                        <p>개봉날짜</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="http://placehold.it/150x225" alt="poster" class="movie_poster">
+                    <div class="movie_score">
+                        <p>5</p>
+                    </div>
+                    <div class="movie_detail">
+                        <p>영화제목</p>
+                        <p>개봉날짜</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="tv_popular">
+        <div class="control">
+            <a href="#"><i class="fas fa-arrow-left left"></i></a>
+            <a href="#"><i class="fas fa-arrow-right right"></i></a>
+        </div>
+        <p>TV Popular</p>
+        <div class="slide_group">
+            <ul class="slide">
+                <li>
+                <img src="http://placehold.it/150x225" alt="poster" class="tv_poster">
+                <div class="tv_score">
+                    <p>5</p>
+                </div>
+                <div class="tv_detail">
+                    <p>영화제목</p>
+                    <p>개봉날짜</p>
+                </div>
+                </li>
+                <li>
+                <img src="http://placehold.it/150x225" alt="poster" class="tv_poster">
+                <div class="tv_score">
+                    <p>5</p>
+                </div>
+                <div class="tv_detail">
+                    <p>영화제목</p>
+                    <p>개봉날짜</p>
+                </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

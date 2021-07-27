@@ -1,48 +1,48 @@
 @charset "UTF-8";
 
-#movie{   
+#tv{   
     padding: 20px;
     padding-top: 90px;
 }
-#movie_popular,
-#movie_now{
+#tv_popular,
+#tv_now{
     margin-bottom: 30px;
 }
-#movie_popular > div,
-#movie_now > div,
+#tv_popular > div,
+#tv_now > div,
 #upcoming > div{
     margin-top: 20px;
     display: flex;
     font-size: 0.75em;
     flex-wrap:wrap;
 }
-#movie_popular > div > a,
-#movie_now > div > a,
+#tv_popular > div > a,
+#tv_now > div > a,
 #upcoming > div > a{
     width: 125px;
     margin-right: 20px;
     margin-bottom: 20px;
 }
-#movie_popular > div > a:last-child,
-#movie_now > div > a:last-child,
+#tv_popular > div > a:last-child,
+#tv_now > div > a:last-child,
 #upcoming > div > a:last-child{
     margin-right: 0;
 }
-#movie_popular > div > a > div,
-#movie_now > div > a > div,
+#tv_popular > div > a > div,
+#tv_now > div > a > div,
 #upcoming > div > a > div {
     display: flex;
     flex-direction: column;
 }
 
-#movie_popular > div > a > div > .imgbox,
-#movie_now > div > a > div > .imgbox,
+#tv_popular > div > a > div > .imgbox,
+#tv_now > div > a > div > .imgbox,
 #upcoming > div > a > div > .imgbox{
     margin-bottom: 5px;
     position: relative;
 }
-#movie_popular > div > a > div > .imgbox >.blank,
-#movie_now > div > a > div > .imgbox > .blank,
+#tv_popular > div > a > div > .imgbox >.blank,
+#tv_now > div > a > div > .imgbox > .blank,
 #upcoming > div > a > div > .imgbox > .blank{
     position: absolute;
     top: 0;
@@ -52,8 +52,8 @@
     height: 180px;
     transition: 0.2s;
 }
-#movie_popular > div > a > div > .imgbox > .img,
-#movie_now > div > a > div > .imgbox > .img,
+#tv_popular > div > a > div > .imgbox > .img,
+#tv_now > div > a > div > .imgbox > .img,
 #upcoming > div > a > div > .imgbox > .img{
     background-size: cover;
     border-radius: 5px;
@@ -62,13 +62,13 @@
     width: 125px;
     height: 180px;
 }
-#movie_popular > div > a > div > .imgbox:hover > .blank,
-#movie_now > div > a > div > .imgbox:hover > .blank,
+#tv_popular > div > a > div > .imgbox:hover > .blank,
+#tv_now > div > a > div > .imgbox:hover > .blank,
 #upcoming > div > a > div > .imgbox:hover > .blank{
     background: rgba(0,0,0,0.5);
 }
-#movie_popular > div > a > div > .imgbox > span,
-#movie_now > div > a > div > .imgbox > span,
+#tv_popular > div > a > div > .imgbox > span,
+#tv_now > div > a > div > .imgbox > span,
 #upcoming > div > a > div > .imgbox > span{
     bottom: 5px;
     right: 5px;
@@ -77,21 +77,21 @@
     transition: opacity 0.1s linear 0s;
     z-index: 1;
 }
-#movie_popular > div > a > div > .imgbox:hover > span,
-#movie_now > div > a > div > .imgbox:hover > span,
+#tv_popular > div > a > div > .imgbox:hover > span,
+#tv_now > div > a > div > .imgbox:hover > span,
 #upcoming > div > a > div > .imgbox:hover > span{
     opacity: 1;
     
 }
-#movie_popular > div > a > div > span,
-#movie_now > div > a > div > span,
+#tv_popular > div > a > div > span,
+#tv_now > div > a > div > span,
 #upcoming > div > a > div > span{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-#movie_popular > div > a > div > span:last-child,
-#movie_now > div > a > div > span:last-child,
+#tv_popular > div > a > div > span:last-child,
+#tv_now > div > a > div > span:last-child,
 #upcoming > div > a > div > span:last-child{
     font-size: 0.8em;
     color: rgb(170, 170, 170);
