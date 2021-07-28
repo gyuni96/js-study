@@ -10,24 +10,40 @@
 }
 #main_content .wrap .bg{
     width: 100%;
-    height: 500px;
+    height: 700px;
     /* background-color: yellow; */
     align-items: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-#main_content .wrap .bg p:first-child{
+.typing-txt{
+    display: none;
+}
+.typing ul li:first-child{
     font-size: 2.2em;
     line-height: 1.2em;
+    text-align: center;
 }
-#main_content .wrap .bg p:last-child{
+.typing ul li:last-child{
     font-size: 1.2em;
+    text-align: center;
+}
+.typing ul li.on {  
+    display: inline-block; 
+    animation-name: cursor; 
+    animation-duration: 0.3s; 
+    animation-iteration-count: infinite; 
+} 
+@keyframes cursor{ 
+    0%{border-right: 1px solid #fff} 
+    50%{border-right: 1px solid #000} 
+    100%{border-right: 1px solid #fff} 
 }
 /* 서브 콘텐츠 */
 
 /* 컨트롤 */
-#sub_content{
+/* #sub_content{
     margin-bottom: 100px;
 }
 #sub_content .control{
@@ -46,19 +62,25 @@
     top: 150px;
     right: -15px;
     color: #fff;
+} */
+#sub_content{
+    margin-bottom: 90px;
 }
-
 #sub_content .wrap{
-    width: 1000px;
+    /* width: 1000px; */
     margin: 0 auto;
     /* background-color: tomato; */
 }
 #movie_popular{
-    margin-bottom: 15px;
-    height: 340px;
+    margin-bottom: 40px;
+    /* height: 340px; */
+    margin-left: 20px;
+    margin-right: 20px;
 }
 #tv_popular{
-    height: 340px;
+    /* height: 340px; */
+    margin-left: 20px;
+    margin-right: 20px;
 }
 #movie_popular > p,
 #tv_popular > p{
@@ -68,17 +90,18 @@
 #movie_popular > .slide_group,
 #tv_popular >.slide_group{
     position: relative;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     height: 100%;
 }
 #movie_popular > .slide_group > ul,
 #tv_popular > .slide_group > ul{
     display: flex;
-    width: 1645px;
+    /* width: 1645px; */
+    flex-wrap: wrap;
     
-    position : absolute;
+    /* position : absolute;
     top: 0;
-    left: 0;
+    left: 0; */
 }
 #movie_popular > .slide_group > ul > li,
 #tv_popular > .slide_group > ul > li{

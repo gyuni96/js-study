@@ -18,60 +18,24 @@
         <div class="wrap">
             <a href="../index.html" class="logo">LOGO</a>
             <ul class="nav_wrap">
-            <li><a href="./moive.html">Movie</a></li>
-            <li><a href="./tv.html">TV</a></li>
-            <li><a href="./search.html">Search</a></li>
+                <li><a href="./moive.html">Movie</a></li>
+                <li><a href="./tv.html">TV</a></li>
+                <li><a href="./search.html">Search</a></li>
+                <a href="#" id="end_btn"><i class="fas fa-times"></i></a>
             </ul>
         </div>
+        <a href="#" id="trigger"><i class="fas fa-bars"></i></a>
     </header>
 
     <div id="search">
         <div class="wrap">
             <form class="search_form">
-                <input type="text" placeholder="Search Movie or Tv ..." class="search_bar" value>
+                <input type="text" placeholder="Search Movie or Tv ..." class="search_bar">
             </form>
         </div>
     </div>
     <div id="result">
-        <div id="movie" class="content">
-            <span>Movie Result</span>
-            <div>
-                <a href="#">
-                    <div>
-                        <div class="imgbox">
-                            <div></div>
-                            <span>
-                                <span role="img" aria-label="rating">★</span>
-                                "평점"
-                                "/전체평점"
-                            </span>
-                        </div>
-                        <span>제목</span>
-                        <span>개봉년도</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div id="tv" class="content">
-            <span>TV Result</span>
-            <div>
-                <a href="#">
-                    <div>
-                        <div class="imgbox">
-                            <div></div>
-                            <span>
-                                <span role="img" aria-label="rating">★</span>
-                                "평점"
-                                "/전체평점"
-                            </span>
-                        </div>
-                        <span>제목</span>
-                        <span>개봉년도</span>
-                    </div>
-                </a>
-            </div>
-    </div>
-        
+        <div style="height: 550px;"></div>
     </div>
         <!-- 푸터 -->
     <footer id="main_footer">
@@ -84,6 +48,9 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/common.js"></script>
+
 
 </body>
 </html>
