@@ -2,6 +2,8 @@ var api_basic = 'https://api.themoviedb.org/3/'
 var api_key = '?api_key=c45b33f39988e53b642592a7241ef43b&language=ko'
 var img = 'https://image.tmdb.org/t/p/w500';
 
+
+
 //메인화면 뽑기
 function popularMovie(){//영화
     axios.get(api_basic + 'movie/popular' + api_key)
@@ -64,7 +66,7 @@ function moviePopular(){
             var output = ''
 
             for(var i = 0 ; i<20; i++){
-                output += '<a href="#" id="'+ data[i].id + '">'
+                output += '<a href="#" value="'+ data[i].id + '" >'
                 output += '<div>'
                 output += '<div class="imgbox">'
                 output += '<div class="img" style="background-image: url('+ img+data[i].poster_path +')"></div>'
@@ -193,12 +195,11 @@ $(document).ready(()=>{
     $('.search_form').submit((e)=>{
         var searchTxt = $('.search_bar').val()
         e.preventDefault()
-        searchGetMovie(searchTxt)
-        searchGetTv(searchTxt)
+        search(searchTxt)
     })
 })
 
-function searchGetMovie(searchTxt){
+function search(searchTxt){
     var frame =`
             <div id="movie" class="content">
             <span>Movie Result</span>
@@ -298,7 +299,25 @@ function searchGetMovie(searchTxt){
             }
         })
 }
-function searchGetTv(searchTxt){
-    
+
+
+// 클릭시 디테일 정보
+
+$('.popular_group').on('click',(e)=>{
+    alert(e.target.value)
+    // console.log(detailId);
+})
+
+function getId(){
+        var detailId = $(this).attr('id')
+        alert(detailId)
+        console.log(detailId);
+    // detail(detailId)
 }
 
+function detail(detailId){
+    axios(api_basic+'movie/'+detailId+api_key)
+        .then((res)=>{
+            console.log(res)
+        })
+}
