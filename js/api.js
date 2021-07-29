@@ -1,3 +1,4 @@
+
 var api_basic = 'https://api.themoviedb.org/3/'
 var api_key = '?api_key=c45b33f39988e53b642592a7241ef43b&language=ko'
 var img = 'https://image.tmdb.org/t/p/w500';
@@ -12,7 +13,7 @@ function popularMovie(){//영화
             var output = ''
             for(var i = 0 ; i < popularMovie.length ; i++){
                 output += '<li>'
-                output += '<a href ="#" id="'+ popularMovie[i].id+'">'
+                output += '<a href ="#" id="'+ popularMovie[i].id+'" onclick = "getId(this)">'
                 output += '<img src = "' + img + popularMovie[i].poster_path + '" alt ="poster" class="movie_poster">'
                 output += '<div class="movie_score">'
                 output += '<p>'+ popularMovie[i].vote_average +'</p>'
@@ -38,7 +39,7 @@ function popularTv(){//티비
             for(var i = 0 ; i < popularTv.length ; i++){
                 if(popularTv[i].poster_path != null){
                     output += '<li>'
-                    output += '<a href="#" id="'+ popularTv[i].id+'">'
+                    output += '<a href="#" id="'+ popularTv[i].id+'" onclick = "getId(this)">'
                     output += '<img src = "' + img + popularTv[i].poster_path + '" alt ="poster" class="tv_poster">'
                     output += '<div class="tv_score">'
                     output += '<p>'+ popularTv[i].vote_average +'</p>'
@@ -66,7 +67,7 @@ function moviePopular(){
             var output = ''
 
             for(var i = 0 ; i<20; i++){
-                output += '<a href="#" value="'+ data[i].id + '" >'
+                output += '<a href="#" id="'+ data[i].id + '" onclick = "getId(this)" >'
                 output += '<div>'
                 output += '<div class="imgbox">'
                 output += '<div class="img" style="background-image: url('+ img+data[i].poster_path +')"></div>'
@@ -91,7 +92,7 @@ function movieNow(){
             var output = ''
 
             for(var i = 0 ; i<20; i++){
-                output += '<a href="#" id="'+ data[i].id + '">'
+                output += '<a href="#" id="'+ data[i].id + '" onclick = "getId(this)">'
                 output += '<div>'
                 output += '<div class="imgbox">'
                 output += '<div class="img" style="background-image: url('+ img+data[i].poster_path +')"></div>'
@@ -116,7 +117,7 @@ function movieUpcoming(){
             var output = ''
 
             for(var i = 0 ; i<20; i++){
-                output += '<a href="#" id="'+ data[i].id + '">'
+                output += '<a href="#" id="'+ data[i].id + '" onclick = "getId(this)">'
                 output += '<div>'
                 output += '<div class="imgbox">'
                 output += '<div class="img" style="background-image: url('+ img+data[i].poster_path +')"></div>'
@@ -145,7 +146,7 @@ function tvPopular(){
             
             for(var i = 0 ; i<20; i++){
                 if(data[i].poster_path != null){
-                    output += '<a href="#" id="'+ data[i].id + '">'
+                    output += '<a href="#" id="'+ data[i].id + '" onclick = "getId(this)">'
                     output += '<div>'
                     output += '<div class="imgbox">'
                     output += '<div class="img" style="background-image: url('+ img+data[i].poster_path +')"></div>'
@@ -170,7 +171,7 @@ function tvNow(){
             
             for(var i = 0 ; i<20; i++){
                 if(data[i].poster_path != null){
-                    output += '<a href="#" id="'+ data[i].id + '">'
+                    output += '<a href="#" id="'+ data[i].id + '" onclick = "getId(this)">'
                     output += '<div>'
                     output += '<div class="imgbox">'
                     output += '<div class="img" style="background-image: url('+ img+data[i].poster_path +')"></div>'
@@ -229,7 +230,7 @@ function search(searchTxt){
 
                 for(var i = 0 ; i < data.length ; i++){
                     
-                    output += '<a href="#" id="'+ data[i].id +'">'
+                    output += '<a href="#" id="'+ data[i].id +'" onclick = "getId(this)">'
                     output += '<div>'
                     output += '<div class="imgbox">'
                     output += '<div class="img" style="background-image: url('+ img+data[i].poster_path +')"></div>'
@@ -243,23 +244,6 @@ function search(searchTxt){
                     output += '<span>'+ data[i].release_date +'</span>'
                     output += '</div>'
                     output += '</a>'
-
-                    // output =
-                    // `
-                    //     <a href="#" id="${data[i].id}">
-                    //         <div>
-                    //             <div class="imgbox">
-                    //                 <div class="img" style="background-image: url(${img + data[i].poster_path})"></div>
-                    //                 <span>
-                    //                     <span role="img" aria-label="rating">★</span>
-                    //                     ${data[i].vote_average}/10
-                    //                 </span>
-                    //             </div>
-                    //             <span>${data[i].title}</span>
-                    //             <span>${data[i].release_date}</span>
-                    //         </div>
-                    //     </a>
-                    // `
                     $('#movie > div').html(output)
                 }
                 
@@ -277,7 +261,7 @@ function search(searchTxt){
             }else{
                 for(var i = 0 ; i < data.length ; i++){
                     
-                    output += '<a href="#" id="'+ data[i].id +'">'
+                    output += '<a href="#" id="'+ data[i].id +'" onclick = "getId(this)">'
                     output += '<div>'
                     output += '<div class="imgbox">'
                     output += '<div class="img" style="background-image: url('+ img+data[i].poster_path +')"></div>'
@@ -286,7 +270,6 @@ function search(searchTxt){
                     output += '<span role="img" aria-label="rating">★</span>'
                     output += data[i].vote_average + '/10'
                     output += '</span>'
-                    
                     output += '</div>'
                     output += '<span>'+ data[i].name +'</span>'
                     output += '<span>'+ data[i].first_air_date +'</span>'
@@ -303,21 +286,70 @@ function search(searchTxt){
 
 // 클릭시 디테일 정보
 
-$('.popular_group').on('click',(e)=>{
-    alert(e.target.value)
-    // console.log(detailId);
-})
-
-function getId(){
-        var detailId = $(this).attr('id')
-        alert(detailId)
-        console.log(detailId);
-    // detail(detailId)
+function getId(t){
+    
+    var detailId = document.getElementById(t.getAttribute('id')).getAttribute('id')
+    detail(detailId)
+    setTimeout(() => {
+        detailOpen()
+    }, 500);
+    
+}
+function detailOpen(){
+    var detail = $('#detail')
+    // detail.css({'display' : 'block'})
+    detail.css({'width' : '100%'})
+}   
+// $('#detail_end').click(()=>{
+//     detailClose()
+//     console.log('뿅');
+// })
+function detailClose(){
+    var detail = $('#detail')
+    
+    detail.css({'width' : '0%'})
 }
 
 function detail(detailId){
     axios(api_basic+'movie/'+detailId+api_key)
         .then((res)=>{
-            console.log(res)
+            var data = res.data
+            // console.log(data.backdrop_path)
+            var bgImg = 'https://image.tmdb.org/t/p/original'
+            var output =''
+            
+            output += '<div id="detail">'
+            output += '<div class="wrap">'
+            output += '<a href="#" id="detail_end" onclick="detailClose()">'
+            output += '<i class="fas fa-times"></i>'
+            output += '</a>'
+            output += '<div class="detail_img" style="background-image : url('+ img+data.poster_path +')">'
+            output += '</div>'
+            output += '<div class="detail_info">'
+            output += '<h3>'+ data.title +'</h3>'
+            output += '<p>'+ data.tagline +'</p>'
+            output += '<div>'
+            output += '<span>'+ data.release_date +'</span>'
+            output += '<span>'+ data.runtime +'</span>'
+            output += '<span>'+  +'</span>'
+            output += '</div>'
+            output += '<p>' + data.overview +'</p>'
+            output += '</div>'
+            output += '<div id="detail_bg" style="background-image : url('+ bgImg+data.backdrop_path +')"></div>'
+            output += '</div>'
+
+            $('nav').html(output)
+            
+            console.log(data)
         })
+        .catch(()=>{
+            axios(api_basic+'tv/'+detailId+api_key)
+                .then((res)=>{
+                    var data = res.data
+                    console.log(data);
+                })
+        })
+
 }
+
+//영화랑 tv랑 아이디가 곂치는게 있음 함수를 나눠서 해야댐 수정 ㄱ

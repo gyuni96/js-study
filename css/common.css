@@ -73,14 +73,30 @@ a{
     border-bottom: 1px solid #fff;
 }
 #detail{
-    display: none;
+    /* display: none; */
     position: fixed;
     top: 70px;
     left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: black;
+    
+    /* 배경 넣고 필터로 블러 */
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 2;
+}
+#detail_bg{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: aqua;
-    /* 배경 넣고 필터로 블러 */
+    
+    background-position: center center;
+    background-size: cover;
+    filter: blur(3px);
+    opacity: 0.5;
 }
 /* 디테일 */
 #detail .wrap{
@@ -90,15 +106,20 @@ a{
     justify-content: center;
     /* align-items: center; */
     padding: 40px;
+    z-index: 2;
 }
 #detail .detail_img{
     width: 30%;
     height: 600px;
-    background-color: azure;
+    /* background-color: azure; */
     margin-right: 30px;
+    z-index: 2;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 #detail .detail_info{
     width: 70%;
+    z-index: 2;
 }
 #detail .detail_info > h3{
     font-size: 2em;
@@ -108,6 +129,9 @@ a{
     font-size: 0.75em;
     margin: 20px 0;
 }
+#detail .detail_info > p:first-of-type{
+    color: #fff
+}
 #detail .detail_info > p{
     font-size: 0.75em;
 }
@@ -116,6 +140,8 @@ a{
     top: 30px;
     right: 50px;
     font-size: 2em;
+    z-index: 3;
+    padding: 10px;
 }
 
 
