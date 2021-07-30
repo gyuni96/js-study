@@ -40,6 +40,14 @@
 #upcoming > div > a > div > .imgbox{
     margin-bottom: 5px;
     position: relative;
+    transition: 0.5s;
+}
+#tv_popular > div > a > div > .imgbox:hover,
+#tv_now > div > a > div > .imgbox:hover,
+#upcoming > div > a > div > .imgbox:hover{
+    box-shadow: 3px 3px 10px rgb(95, 95, 95);
+    transform: scale(1.05) translateY(-10px);
+    
 }
 #tv_popular > div > a > div > .imgbox >.blank,
 #tv_now > div > a > div > .imgbox > .blank,
@@ -51,6 +59,7 @@
     width: 125px;
     height: 180px;
     transition: 0.2s;
+    border-radius: 5px;
 }
 #tv_popular > div > a > div > .imgbox > .img,
 #tv_now > div > a > div > .imgbox > .img,
