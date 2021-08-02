@@ -28,7 +28,11 @@ https://github.com/Gyunnam/Dangsodam
 ### [Doname]
 
 <hr>
+https://gyunnam.github.io/Dangsodam/
 
 ### [Stack]
 
 <hr>
+HTML5 CSS3 JS (jQuery)
+
+Swiper , 인스타그램API , 네이버맵 API
