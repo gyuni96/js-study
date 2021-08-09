@@ -1,5 +1,10 @@
 # GYUNFLIX º균플릭스
 
+### [도메인]
+
+<hr>
+https://gyunnam.github.io/Gyunflix/
+
 ### [제작기간]
 
 <hr>
@@ -20,11 +25,6 @@ TMDB API를 이용해서 영화 TV 의 정보를 제공
 
 <hr>
 https://github.com/Gyunnam/Gyunflix
-
-### [도메인]
-
-<hr>
-https://gyunnam.github.io/Gyunflix/
 
 ### [Stack]
 
