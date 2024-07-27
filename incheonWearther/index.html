@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incheon Weather</title>
+    <script src="./jquery-3.5.1.js"></script>
+    <script src="https://kit.fontawesome.com/67daea8931.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <section class="top_weather">
+            <div class="top_weather_box">
+                <p class="main-city">인천광역시</p>
+                <p class="main-weather"></p>
+                <h1 class="main-temp"></h1>
+                <ul>
+                    <li>최고 </li>
+                    <li>최저 </li>
+                </ul>
+            </div>
+        </section>
+        <section class="weather_box">
+            <div class="box">
+                <i class="fas fa-arrow-left" id="back"></i>
+                <i class="fas fa-arrow-right" id="next"></i>
+                <ul class="slide">
+                    <li>
+                        <div class="time_weahter">
+                            <span>시간</span>
+                            <span>아이콘</span>
+                            <span>현재온도</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="time_weahter">
+                            <span>시간</span>
+                            <span>아이콘</span>
+                            <span>현재온도</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="time_weahter">
+                            <span>시간</span>
+                            <span>아이콘</span>
+                            <span>현재온도</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="time_weahter">
+                            <span>시간</span>
+                            <span>아이콘</span>
+                            <span>현재온도</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="time_weahter">
+                            <span>시간</span>
+                            <span>아이콘</span>
+                            <span>현재온도</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="time_weahter">
+                            <span>시간</span>
+                            <span>아이콘</span>
+                            <span>현재온도</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="time_weahter">
+                            <span>시간</span>
+                            <span>아이콘</span>
+                            <span>현재온도</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 시간 슬라이드 -->
+            <script>
+                $(document).ready(function(){
+                    var imgs;
+                    var img_count;
+                    var img_position = 1;
+
+                    imgs = $('.slide');
+                    img_count = imgs.children().length;
+                    // img_count = imgs.children().length;
+
+                    $('.box #back').click(function(){
+                        back()
+                    })
+                    $('.box #next').click(function(){
+                        next()
+                    })
+
+                    function back(){
+                        if(1 < img_position){
+                            imgs.animate({
+                                left:'+=80px'
+                            });
+                            img_position--;
+                        }
+                    }
+                    function next(){
+                        if(img_count > img_position){
+                            imgs.animate({
+                                left:'-=80px'
+                            });
+                            img_position++;
+                        }
+                    }
+                })
+            </script>
+        </section> 
+        <section class="weather_week">
+            <table class="weather_table"
+                    height="222px"> 
+                <!-- <tr align="center">
+                    <td class="week-day">월요일</td>
+                    <td class="week-icon">아이콘</td>
+                    <td class="week-max">최고</td>
+                    <td class="week-min">최저</td>
+                </tr>
+                <tr align="center">
+                    <td class="week-day">월요일</td>
+                    <td class="week-icon">아이콘</td>
+                    <td class="week-max">최고</td>
+                    <td class="week-min">최저</td>
+                </tr>
+                <tr align="center">
+                    <td class="week-day">월요일</td>
+                    <td class="week-icon">아이콘</td>
+                    <td class="week-max">최고</td>
+                    <td class="week-min">최저</td>
+                </tr>
+                <tr align="center">
+                    <td class="week-day">월요일</td>
+                    <td class="week-icon">아이콘</td>
+                    <td class="week-max">최고</td>
+                    <td class="week-min">최저</td>
+                </tr>
+                <tr align="center">
+                    <td class="week-day">월요일</td>
+                    <td class="week-icon">아이콘</td>
+                    <td class="week-max">최고</td>
+                    <td class="week-min">최저</td>
+                </tr>
+                <tr align="center">
+                    <td class="week-day">월요일</td>
+                    <td class="week-icon">아이콘</td>
+                    <td class="week-max">최고</td>
+                    <td class="week-min">최저</td>
+                </tr>
+                <tr align="center">
+                    <td class="week-day">월요일</td>
+                    <td class="week-icon">아이콘</td>
+                    <td class="week-max">최고</td>
+                    <td class="week-min">최저</td>
+                </tr> -->
+            </table>
+        </section>
+        <section class="weather_detail">
+            <div class="detail_wrap">
+                <ul>
+                    <li>
+                        <ul>
+                            <li>
+                                <span>
+                                    <p class="detail-title">일출</p>
+                                    <p class="detail-content sunrise"></p>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <p class="detail-title">일몰</p>
+                                    <p class="detail-content sunset"></p>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <span>
+                                    <p class="detail-title">기압</p>
+                                    <p class="detail-content level"></p>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <p class="detail-title">습도</p>
+                                    <p class="detail-content humidity">%</p>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <span>
+                                    <p class="detail-title">바람</p>
+                                    <p class="detail-content wind"></p>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <p class="detail-title">체감온도</p>
+                                    <p class="detail-content feellike"></p>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <p>gyunNam@ </p>
+            <a href="https://github.com/Gyunnam">
+                <i class="fab fa-github"></i>
+            </a>
+        </footer>
+    </div>
+    
+    <script src="./weather_script.js"></script>
+    
+</body>
+</html>

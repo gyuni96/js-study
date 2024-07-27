@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'NanumGothic', sans-serif;
+    font-size: 14px;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration:none;
+}
+.container{
+    width: 500px;
+    background: #92B0FF;
+    margin: 100px auto;
+    color:#fff;
+}
+.top_weather{
+    text-align: center;  
+}
+.top_weather .top_weather_box{
+    padding-top: 67px;
+    padding-bottom: 120px;
+    width: 100%;
+    height: 350px;  
+}
+.top_weather .main-city{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.top_weather .main-weather{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top_weather .main-weather img{
+    width: 40px;
+    height: 40px;
+}
+.top_weather .main-temp{
+    font-weight: 700;
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+.top_weather .main-temp::after,
+.top_weather ul li::after,
+.weather-week table .week-max::after,
+.weather-week table .week-min::after,
+.detail-content.feellike::after{
+    content: "°";
+}
+.top_weather ul{
+    display: flex;
+    justify-content: center;
+}
+.top_weather ul li:first-child {
+    margin-right: 15px;
+}
+
+
+/* wwather box */
+
+.box{
+    border-top: 1px rgba(255,255,255,0.7) solid;
+    border-bottom:  1px rgba(255,255,255,0.7) solid;
+    height: 125px; 
+    position: relative;
+    overflow: hidden;
+}
+#back{
+    position: absolute;
+    left:  -5px;
+    top:40%;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px
+}
+#next{
+    position: absolute;
+    right: -5px;
+    top:40%;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px
+}
+.weather_box .slide{
+    width: 1000px;
+    position: absolute;
+    top:0 ;
+    left: 0;
+    /* display: flex; */
+    padding: 13px 20px 20px;
+    
+}
+.weather_box .slide li {
+    margin-left: 20px;
+    display: inline-block;
+}
+.weather_box .slide li :hover{
+    color: #000000;
+    background: rgba(194, 198, 255, 0.9);
+    cursor: pointer;
+}
+.weather_box .slide li:first-child{
+    margin-left: 0;
+}
+.weather_box .time_weahter{
+    width: 60px;
+    height: 100px;
+    text-align: center;
+    padding: 6px 0 ;
+    background: rgba(194, 198, 255, 0.6);
+    border-radius: 10px;
+}
+.weather_box .time_weahter:last-child{
+    margin-left: 0;
+}
+.weather_box .time_weahter span{
+    display: block;
+}
+.weather_box .time_weahter span img {
+    width: 50px;
+    height: 50px;
+}
+
+
+/* wather week */
+.weather_week{
+    padding : 20px 33px;
+    border-bottom: 1px solid rgba(255,255,255,0.7);
+}
+
+.weather_week table .week-day{
+    width: 50px;
+    text-align: left;
+}
+.weather_week table .week-icon{
+    width: 284px;
+}
+.weather_week table .week-icon img{
+    width: 32px;
+    height: 32px;
+}
+.weather_week table .week-max{
+    text-align: right;
+    width: 50px;
+}
+.weather_week table .week-min{
+    text-align: right;
+    width: 50px;
+    color: #ebebeb;
+}
+
+/* weather detail */
+
+.weather_detail{
+    padding:15px 33px;
+}
+.weather_detail .detail_wrap{
+    width: 100%;
+}
+.weather_detail .detail_wrap ul li {
+    margin-bottom: 5px;
+}
+.weather_detail .detail_wrap ul li:last-child{
+    margin-bottom: 0;
+}
+
+.weather_detail .detail_wrap ul li ul{
+    display: flex;
+    border-bottom: 1px solid rgba(255,255,255,0.7);
+    
+}
+.weather_detail .detail_wrap ul li ul li {
+    width: 50%;
+}
+.weather_detail .detail_wrap ul li ul li span .detail-title{
+    font-size: 12px;
+    color: #ebebeb;
+}
+.weather_detail .detail_wrap ul li ul li span .detail-content{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.level::after{
+    content: 'hPa';
+    font-size: 20px;
+    color: #ebebeb;
+}
+.wind::after{
+    content: 'm/s';
+    font-size: 20px;
+    color: #ebebeb;
+}
+
+/* footer */
+
+footer{
+    width: 100%;
+    padding : 20px 0;
+    border-top: 1px solid rgba(255,255,255,0.7);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+footer p::after{
+    content: " 2021";
+    font-size: 12px;
+}
+footer a{
+    padding: 10px;
+}
+footer a i{
+    font-size: 30px;
+    color: #fff;
+}
