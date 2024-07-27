@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYUNFLIX</title>
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/67daea8931.js" crossorigin="anonymous"></script>
+    <!-- 스타일시트 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main.css">
+    
+</head>
+<body>
+  <!-- 헤더 -->
+    <header id="main_header">
+      <div class="wrap">
+        <a href="./index.html" class="logo">
+          <img src="./img/logo.png" alt="logo">
+        </a>
+        <ul class="nav_wrap">
+          <li><a href="./page/moive.html">Movie</a></li>
+          <li><a href="./page/tv.html">TV</a></li>
+          <li><a href="./page/search.html">Search</a></li>
+          <li><a href="#" id="end_btn"><i class="fas fa-times"></i></a></li>
+        </ul>
+      </div>
+      <a href="#" id="trigger"><i class="fas fa-bars"></i></a>
+    </header>
+
+    <!-- 메인컨텐츠 -->
+    <div id="main_content">
+      <div class="wrap">
+        <div class="bg">
+          <div class="typing-txt">
+            <ul>
+              <li>Welcome.</li>
+              <li>GYUNFLIX provides various information about the Movie, TV.</li>
+            </ul>
+          </div>
+          <div class="typing">
+            <ul>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 서브 컨텐츠 -->
+    <div id="sub_content">
+      <div class="wrap">
+        <!-- 영화 -->
+        <div id="movie_popular">
+          <!-- <div class="control">
+            <a href="javascript:void(0)" class="left first" ><i class="fas fa-arrow-left "></i></a>
+            <a href="javascript:void(0)" class="right first"><i class="fas fa-arrow-right "></i></a>
+          </div> -->
+          <p>Movie Popular</p>
+          <div class="slide_group">
+            <ul class="slide first">
+              <!-- 컨텐츠 들어갈 공간 -->
+            </ul>
+          </div>
+        </div>
+        <!-- tv -->
+        <div id="tv_popular">
+          <!-- <div class="control">
+            <a href="javascript:void(0)" class="left second"><i class="fas fa-arrow-left "></i></a>
+            <a href="javascript:void(0)" class="right second"><i class="fas fa-arrow-right "></i></a>
+          </div> -->
+          <p>TV Popular</p>
+          <div class="slide_group">
+            <ul class="slide second">
+              <!-- 컨텐츠 들어갈 공간 -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav>
+
+    </nav>
+
+    <!-- 푸터 -->
+    <footer id="main_footer">
+      <div class="wrap">
+        <div class="content">
+          <p>GYUNFLIX</p>
+          <p>Copyright 2021. Gyunnam</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+    <script src="./js/api.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- <script src="./js/ajax.js"></script> -->
+</body>
+</html>

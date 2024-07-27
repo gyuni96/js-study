@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+/* 메인 콘텐츠 */
+#main_content{
+    margin-bottom: 40px;
+}
+#main_content .wrap{
+    /* width: 1000px; */
+    margin: 0 auto;
+}
+#main_content .wrap .bg{
+    width: 100%;
+    height: 700px;
+    background-color: black;
+    background-image: url(https://fontmeme.com/permalink/210730/354407254aa8c9371ef2648253acaf60.png);
+    background-repeat: no-repeat;
+    background-position: center 240px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.typing-txt{
+    display: none;
+}
+.typing ul li:first-child{
+    font-size: 2.2em;
+    line-height: 1.2em;
+    text-align: center;
+}
+.typing ul li:last-child{
+    font-size: 1.2em;
+    text-align: center;
+}
+.typing ul li.on {  
+    display: inline-block; 
+    animation-name: cursor; 
+    animation-duration: 0.3s; 
+    animation-iteration-count: infinite; 
+} 
+@keyframes cursor{ 
+    0%{border-right: 1px solid #fff} 
+    50%{border-right: 1px solid #000} 
+    100%{border-right: 1px solid #fff} 
+}
+/* 서브 콘텐츠 */
+
+/* 컨트롤 */
+/* #sub_content{
+    margin-bottom: 100px;
+}
+#sub_content .control{
+    position: relative;
+    font-size: 1.5em;
+    z-index: 5;
+}
+#sub_content .control .left{
+    position: absolute;
+    top: 150px;
+    left: -15px;
+    color: #fff;
+}
+#sub_content .control .right{
+    position: absolute;
+    top: 150px;
+    right: -15px;
+    color: #fff;
+} */
+#sub_content{
+    margin-bottom: 90px;
+}
+#sub_content .wrap{
+    /* width: 1000px; */
+    margin: 0 auto;
+    /* background-color: tomato; */
+}
+#movie_popular{
+    margin-bottom: 40px;
+    /* height: 340px; */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#tv_popular{
+    /* height: 340px; */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#movie_popular > p,
+#tv_popular > p{
+    font-size: 1.3em;
+    margin-bottom: 25px;
+}
+#movie_popular > .slide_group,
+#tv_popular >.slide_group{
+    position: relative;
+    /* overflow-x: hidden; */
+    height: 100%;
+}
+#movie_popular > .slide_group > ul,
+#tv_popular > .slide_group > ul{
+    display: flex;
+    /* width: 1645px; */
+    flex-wrap: wrap;
+    
+    /* position : absolute;
+    top: 0;
+    left: 0; */
+}
+#movie_popular > .slide_group > ul > li,
+#tv_popular > .slide_group > ul > li{
+    position: relative;
+    margin-left: 15px;
+    transition: 0.5s;
+}
+#movie_popular > .slide_group > ul > li:hover,
+#tv_popular > .slide_group > ul > li:hover{
+    transform: translateY(-10px);
+}
+#movie_popular > .slide_group > ul > li > a >.movie_poster,
+#tv_popular > .slide_group > ul > li > a > .tv_poster{
+    margin-bottom: 20px;
+    border-radius: 5px;
+    width: 150px;
+    height: 225px;
+    /* box-shadow: 3px 3px 10px rgb(95, 95, 95); */
+}
+#movie_popular > .slide_group > ul > li:hover > a >.movie_poster,
+#tv_popular > .slide_group > ul > li:hover > a > .tv_poster{
+    box-shadow: 3px 3px 10px rgb(95, 95, 95);
+    transform: scale(1.05);
+}
+#movie_popular > .slide_group > ul > li > a >.movie_score,
+#tv_popular > .slide_group > ul > li > a >.tv_score{
+    position: absolute;
+    border-radius: 100px;
+    background-color: #000;
+    top: 200px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgb(48, 255, 48);
+}
+#movie_popular > .slide_group > ul > li > a >.movie_score > p,
+#tv_popular > .slide_group > ul > li > a >.tv_score > p {
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9em;
+    
+}
+#movie_popular > .slide_group > ul > li >a > .movie_detail,
+#tv_popular > .slide_group > ul > li >a > .tv_detail{
+    padding-bottom: 10px
+}
+#movie_popular > .slide_group > ul > li >a > .movie_detail > p:first-child,
+#tv_popular > .slide_group > ul > li >a > .tv_detail > p:first-child{
+    margin-bottom: 6px;
+    font-size: 1.1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 150px;
+}
+#movie_popular > .slide_group > ul > li >a > .movie_detail > p:last-child,
+#tv_popular> .slide_group > ul > li > a >.tv_detail > p:last-child{
+    color: rgb(83, 83, 83);
+    font-size: 0.9em;
+    
+}
+
+/* #detail{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: saddlebrown;
+} */

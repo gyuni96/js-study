@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+#movie{   
+    padding: 20px;
+    padding-top: 90px;
+}
+#movie_popular,
+#movie_now{
+    margin-bottom: 30px;
+}
+#movie_popular > div,
+#movie_now > div,
+#upcoming > div{
+    margin-top: 20px;
+    display: flex;
+    font-size: 0.75em;
+    flex-wrap:wrap;
+}
+#movie_popular > div > a,
+#movie_now > div > a,
+#upcoming > div > a{
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+#movie_popular > div > a:last-child,
+#movie_now > div > a:last-child,
+#upcoming > div > a:last-child{
+    margin-right: 0;
+}
+#movie_popular > div > a > div,
+#movie_now > div > a > div,
+#upcoming > div > a > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#movie_popular > div > a > div > .imgbox,
+#movie_now > div > a > div > .imgbox,
+#upcoming > div > a > div > .imgbox{
+    margin-bottom: 5px;
+    position: relative;
+    transition: 0.5s;
+}
+#movie_popular > div > a > div > .imgbox:hover,
+#movie_now > div > a > div > .imgbox:hover,
+#upcoming > div > a > div > .imgbox:hover{
+    box-shadow: 3px 3px 10px rgb(95, 95, 95);
+    transform: scale(1.05) translateY(-10px);
+    
+}
+#movie_popular > div > a > div > .imgbox >.blank,
+#movie_now > div > a > div > .imgbox > .blank,
+#upcoming > div > a > div > .imgbox > .blank{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0);
+    width: 125px;
+    height: 180px;
+    transition: 0.2s;
+    border-radius: 5px;
+}
+#movie_popular > div > a > div > .imgbox > .img,
+#movie_now > div > a > div > .imgbox > .img,
+#upcoming > div > a > div > .imgbox > .img{
+    background-size: cover;
+    border-radius: 5px;
+    background-position: center center;
+    background-color: black;
+    width: 125px;
+    height: 180px;
+}
+#movie_popular > div > a > div > .imgbox:hover > .blank,
+#movie_now > div > a > div > .imgbox:hover > .blank,
+#upcoming > div > a > div > .imgbox:hover > .blank{
+    background: rgba(0,0,0,0.5);
+}
+#movie_popular > div > a > div > .imgbox > span,
+#movie_now > div > a > div > .imgbox > span,
+#upcoming > div > a > div > .imgbox > span{
+    bottom: 5px;
+    right: 5px;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.1s linear 0s;
+    z-index: 1;
+}
+#movie_popular > div > a > div > .imgbox:hover > span,
+#movie_now > div > a > div > .imgbox:hover > span,
+#upcoming > div > a > div > .imgbox:hover > span{
+    opacity: 1;
+    
+}
+#movie_popular > div > a > div > span,
+#movie_now > div > a > div > span,
+#upcoming > div > a > div > span{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#movie_popular > div > a > div > span:last-child,
+#movie_now > div > a > div > span:last-child,
+#upcoming > div > a > div > span:last-child{
+    font-size: 0.8em;
+    color: rgb(170, 170, 170);
+}

@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+#tv{   
+    padding: 20px;
+    padding-top: 90px;
+}
+#tv_popular,
+#tv_now{
+    margin-bottom: 30px;
+}
+#tv_popular > div,
+#tv_now > div,
+#upcoming > div{
+    margin-top: 20px;
+    display: flex;
+    font-size: 0.75em;
+    flex-wrap:wrap;
+}
+#tv_popular > div > a,
+#tv_now > div > a,
+#upcoming > div > a{
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+#tv_popular > div > a:last-child,
+#tv_now > div > a:last-child,
+#upcoming > div > a:last-child{
+    margin-right: 0;
+}
+#tv_popular > div > a > div,
+#tv_now > div > a > div,
+#upcoming > div > a > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#tv_popular > div > a > div > .imgbox,
+#tv_now > div > a > div > .imgbox,
+#upcoming > div > a > div > .imgbox{
+    margin-bottom: 5px;
+    position: relative;
+    transition: 0.5s;
+}
+#tv_popular > div > a > div > .imgbox:hover,
+#tv_now > div > a > div > .imgbox:hover,
+#upcoming > div > a > div > .imgbox:hover{
+    box-shadow: 3px 3px 10px rgb(95, 95, 95);
+    transform: scale(1.05) translateY(-10px);
+    
+}
+#tv_popular > div > a > div > .imgbox >.blank,
+#tv_now > div > a > div > .imgbox > .blank,
+#upcoming > div > a > div > .imgbox > .blank{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0);
+    width: 125px;
+    height: 180px;
+    transition: 0.2s;
+    border-radius: 5px;
+}
+#tv_popular > div > a > div > .imgbox > .img,
+#tv_now > div > a > div > .imgbox > .img,
+#upcoming > div > a > div > .imgbox > .img{
+    background-size: cover;
+    border-radius: 5px;
+    background-position: center center;
+    background-color: black;
+    width: 125px;
+    height: 180px;
+}
+#tv_popular > div > a > div > .imgbox:hover > .blank,
+#tv_now > div > a > div > .imgbox:hover > .blank,
+#upcoming > div > a > div > .imgbox:hover > .blank{
+    background: rgba(0,0,0,0.5);
+}
+#tv_popular > div > a > div > .imgbox > span,
+#tv_now > div > a > div > .imgbox > span,
+#upcoming > div > a > div > .imgbox > span{
+    bottom: 5px;
+    right: 5px;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.1s linear 0s;
+    z-index: 1;
+}
+#tv_popular > div > a > div > .imgbox:hover > span,
+#tv_now > div > a > div > .imgbox:hover > span,
+#upcoming > div > a > div > .imgbox:hover > span{
+    opacity: 1;
+    
+}
+#tv_popular > div > a > div > span,
+#tv_now > div > a > div > span,
+#upcoming > div > a > div > span{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#tv_popular > div > a > div > span:last-child,
+#tv_now > div > a > div > span:last-child,
+#upcoming > div > a > div > span:last-child{
+    font-size: 0.8em;
+    color: rgb(170, 170, 170);
+}
