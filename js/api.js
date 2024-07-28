@@ -1,6 +1,8 @@
 
+const keyValue = '' // api 키값 입력 
+
 var api_basic = 'https://api.themoviedb.org/3/'
-var api_key = '?api_key=c45b33f39988e53b642592a7241ef43b&language=ko'
+var api_key = '?api_key=' + keyValue + '&language=ko'
 var img = 'https://image.tmdb.org/t/p/w500';
 
 
