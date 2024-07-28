@@ -24,7 +24,7 @@ $(function(){
 })
 
 // 인스타그램 호출
-var token = 'IGQVJXZAVNRQTV1ZAzA3UE9WUFlpbjZAjYldrUnhOSzNJTHFDdmNrdG8ySzlvNUFncDhsRjdZASUlET2JWUXFGYVQtTzRhTW05V0ZAOc0t3S25FSmRDa0FmYmJlUFFBdms1dVk5bFdYdk1OMWQtcmVaeGhYdwZDZD'
+var token = '' // token 값 입력 만료되서 제거 
 var feed = new Instafeed({
     target : 'gallery',
     template : '<li class="box"><a href="{{link}}"><img title="{{caption}}" src="{{image}}" sizes="cover" alt ="instagram_img"/></a></li>',
